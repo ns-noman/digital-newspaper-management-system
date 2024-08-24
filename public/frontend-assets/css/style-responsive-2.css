@@ -1,0 +1,358 @@
+.photo-gallery-section .photo-gallery{
+		padding-top:20px;
+		background-color:#f1f0f0;
+		padding-bottom:20px;
+	}
+
+.photo-gallery-section .photo-gallery .photo-gallery-top{
+		  padding-bottom:20px;
+	}
+	
+.image_wrapper .play{ position:absolute; left:8px; top:5px; color:rgba(236,26,46,.8); opacity:.8}	
+	
+ .photo-gallery-album-section  .album-box{ margin-bottom:20px;}
+ .caption{ padding:10px 0}
+ 
+ 
+ 
+
+ 
+
+@media only screen and (min-width: 992px) {
+    
+	
+	
+	  
+	.photo-gallery-section .photo-gallery{
+		padding-right:70px;
+		background-color:#f1f0f0;
+	}
+	 
+	.photo-gallery-section .photo-gallery .photo-gallery-top .image_wrapper{
+		position:relative;
+		height:350px;
+	}
+	 
+	 .photo-gallery-caption{ 
+	 padding-top:20px;
+	 }
+	 
+	.photo-gallery-section .photo-gallery .image_wrapper{
+		position:relative;
+		height:350px;
+	}
+	    
+	 .photo-gallery .carousel-control{ bottom:auto; top:3%}
+	 
+	.photo-gallery .carousel-control.left{
+		left: auto;
+    right: -8%;
+			}
+			
+	.photo-gallery .carousel-control.right{
+		left: auto;
+    right: -13%;
+			}
+					
+	  										  
+	.photo-gallery-album-section  .album .image_wrapper{
+		position:relative;
+		height:213px;
+	}
+	 
+	 
+	.photo-gallery-album-section  .album .row{ margin-bottom:20px;}  
+	 
+	 
+	 
+.sub-news .side-1{
+	 
+	 width:50%;
+	 
+    }
+	
+.sub-news .image_wrapper {
+    height: 72px;
+    width: 92px;
+}	
+	
+.sub-news .side-2{
+	 
+	 width:49%;
+	 float:right
+	 
+    }	
+
+	
+	 
+	 
+}
+
+
+ 
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+      
+	
+.sub-news .side-1{
+	 
+	 width:50%;
+	 
+    }
+	
+.sub-news .image_wrapper {
+    height: 50px;
+    width: 65px;
+}	
+	
+.sub-news .side-2{
+	 
+	 width:50%;
+	 
+    }	
+.detail-latest .nav>li>a {
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-right: 0;
+}
+
+.detail-latest .nav-tabs>li:last-child>a {
+    padding-left: 10px;
+}	
+
+.detail-latest-section .more-news .image_wrapper{
+	height:115px;
+}	
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+ .btn-breaking{width:15%}
+ .breaking-link{ width:85% }
+	  
+	.photo-gallery-section .photo-gallery{
+		padding-right:15px;
+		margin-bottom:40px;
+	}
+	 
+	.photo-gallery-section .photo-gallery .photo-gallery-top .image_wrapper{
+		position:relative;
+		height:450px;
+	}
+	 
+	 .photo-gallery-caption{ 
+	 padding-top:20px;
+	 }
+	 
+	.photo-gallery-section .photo-gallery .image_wrapper{
+		position:relative;
+		height:300px;
+	}
+	    
+	 	
+	  										  
+	.photo-gallery-album-section  .album .image_wrapper{
+		position:relative;
+		height:300px;
+	}
+	 
+	 
+	.photo-gallery-album-section  .album .row{ margin-bottom:20px;}  
+	 
+	 
+	  .photo-gallery-album-section  .album-box{ margin-bottom:20px;}
+	
+
+.sub-news .side-1{
+	 
+	 width:50%;
+	 
+    }
+	
+.sub-news .image_wrapper {
+    height: 52px;
+    width: 68px;
+}	
+	
+.sub-news .side-2{
+	 
+	 width:50%;
+	 
+    }	
+
+	
+	
+.main-news-section .top-news .image_wrapper { height:285px;}
+.detail-latest-section .more-news .image_wrapper{height:350px;}	
+.more-news{     margin-top: 30px;}
+}
+
+
+
+
+
+
+
+
+
+
+	
+@media only screen and (max-width : 767px) {
+      
+	  .btn-breaking{width:20%}
+ .breaking-link{ width:80% }
+		                                                     /* photo-gallery-section */
+	.photo-gallery-section .photo-gallery{ margin-bottom:40px; }
+	
+	.photo-gallery-section {
+		padding-bottom: 0px;
+	}
+	.photo-gallery-section .photo-gallery .photo-gallery-top .image_wrapper{
+		position:relative;
+		height:350px;
+	}
+	.photo-gallery-section .photo-gallery .photo-gallery-bottom .image_wrapper{
+		position:relative;
+		height:50px;
+	}
+	.photo-gallery-section .photo-gallery .image_wrapper{
+		position:relative;
+		height:350px;
+	} 
+	
+
+
+
+
+	
+	
+	.searchbar  input{
+	  width: 85%;
+	}
+
+	 
+	.searchsubmit {
+		width: 15%; 
+	}
+	 
+	 
+	 
+	.sub-news .side-2{
+	 
+	 width:100%;
+	 padding-left: 0px;
+	 margin-top:10px;
+    }	
+	
+	.sub-news .side-1{
+	 padding-right: 0; 
+	 width:100%;
+	 
+    }
+	 
+	 	.sub-news .image_wrapper {
+    height: 130px;
+    width: 100%;
+}
+	
+
+
+ .selected-news-section .carousel-control{ bottom:auto; top:-10%}
+	 
+	.selected-news-section .carousel-control.left{
+		left: auto;
+    right: 5%;
+			}
+			
+	.selected-news-section .carousel-control.right{
+		left: auto;
+    right: 0%;
+			}	
+.online-poll{    margin-top: 15px;}
+.latest .nav>li>a{padding: 10px 10px;}			
+ul.social li{padding-right: 10px;}			
+ul.apps li{padding-right: 5px;}			
+a.navbar-brand h1{font-size:30px;}
+.searchbar{top:25px;}
+
+.detail-latest{margin-top:20px;}
+
+.detail-latest-section .more-news .image_wrapper{height: 230px;}
+.more-news{     margin-top: 30px;}
+
+.detail-heading .social {
+    height: 36px;
+    line-height: 36px;
+}
+.detail-heading .social p{     padding-top: 0px; }
+
+.box-title{    font-size: 20px;}
+.box-title span{clear: left;
+    padding-top: 10px;}
+			}
+
+
+
+
+
+
+
+ 
+ 
+	
+	
+	
+
+@media only screen and (max-width : 479px) {
+ 	 .btn-breaking{width:25%}
+ .breaking-link{ width:75% }
+	 .searchbar{top:55px;}
+	.header-top-section .side-1,.header-top-section .side-2{ width:100%; text-align:center}
+ .header-top-section .side-2{ padding-bottom:5px;}
+ .social-section	ul{ padding-left:0;}
+ .social-section ul img{ }
+ ul.apps li {
+    padding-right: 5px;
+    width: 48%;
+}
+}	
+
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:nth-child(2) { display:block; }
+
+}/*
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	 .active > div:first-child + div { display:block; } 
+}*/
+@media (min-width: 767px ) {
+	.carousel-inner .active.left { left: -33.33%; }
+	.carousel-inner .next        { left:  33.33%; }
+	.carousel-inner .prev		 { left: -33.33%; }	
+}
+
+
+ 
+@media (max-width: 340px ) {
+ .detail-latest .nav>li>a{ padding: 20px 15px;}
+}
+
+				

@@ -1,0 +1,42 @@
+
+
+/* tab filter */
+
+.tab-filter {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.listing-filter {
+	border-bottom: solid 1px #ddd;
+	padding: 15px 0;
+}
+
+.breadcrumb-list {
+	color: #888;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.5;
+	margin-bottom: 0;
+}
+
+.breadcrumb-list a.current {
+	color: #000;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.dropdown-menu-modal {
+	width: 100%;
+	max-width: 400px;
+}
+
+.listing-view-action span {
+	color: #888;
+	cursor: pointer;
+}
+
+.listing-view-action span.active {
+	color: #000;
+}

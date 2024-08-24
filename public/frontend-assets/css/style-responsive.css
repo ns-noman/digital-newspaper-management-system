@@ -1,0 +1,934 @@
+@viewport{
+zoom: 1.0;
+width: device-width;
+}
+
+@media only screen and (min-width: 992px) {	
+	
+     .ad-sm2{ padding-top:20px;}
+	 /* main-news-section */
+	
+	.main-news-section .top-news{
+		position:relative;
+		padding-right:29px;
+	}
+	
+	.main-news-section .sub-news{
+		padding-left:0px;
+	}
+	
+	                                             /* seleted news section */
+	
+	
+	
+	                                             /* gallery-latest-section */
+	.gallery-latest-section .latest-news{
+		padding-right:50px;
+	}
+
+	.gallery-latest-section .gallery{
+		padding-left:50px;
+	}
+	
+	                                           /* bangladesh-foreighn-section */
+	.bangladesh-foreighn-section .bangladesh{
+		padding-right:70px;
+	}
+	.bangladesh h3{
+		margin-top:0;
+	}
+	
+	.bangladesh-foreighn-section .foreighn{
+		padding-left:70px;
+	}
+	
+	                                          /*  economic-free-section */
+	.economic-free-section .economic{
+		padding-right:60px
+	}
+	
+	.economic-free-section .free{
+		padding-left:60px;
+	}
+	
+	                                           /* science-sports-section */
+	.science-sports-section .science{
+		padding-right:60px;
+	}
+	
+	.science-sports-section .sports{
+		padding-left:100px;
+		padding-right:100px;
+	}
+	
+	.sports .sports-top h3{
+		margin-top:0;
+	}
+	
+	
+	                                          /* entertainment-life-style-section */
+											  
+	
+	                                         /* footer-section */
+	.footer-section .footer-top .side-1{
+		border-right:1px solid #D3D3D3;
+		min-height:186px;		
+	}
+	.footer-section .footer-top .side-2{
+		border-right:1px solid #D3D3D3;
+		min-height:186px;
+		padding-left:55px;
+	}
+	
+	.footer-section .footer-top .side-3{
+		border-right:1px solid #D3D3D3;
+		min-height:186px;
+		padding-left:55px;
+	}
+	.footer-section .footer-top .side-4{
+		padding-left:55px;
+	}
+	                                           /* Detail section */
+	.detail-content iframe{    
+		padding-left:100px;
+		padding-right:100px;
+	}											   
+											   
+										       /* category-section */
+											   
+	
+    .grameen-economic-top{
+		padding-right:100px;
+	}
+    .ponno-bazar{
+		padding-right:70px;
+	}
+	
+			                                    /* photo-gallery-section */
+												
+	
+
+
+	                                            /* all image wrapper height */
+   .main-news-section .top-news .image_wrapper{
+		height:389px;
+	}	
+    .main-news-section .top-news .image_wrapper{
+		height:389px;
+	}
+	.main-news-section .special-news .image_wrapper{
+		height:116px;
+	}
+	.selected-news .image_wrapper{
+		height:156px;
+	}
+	.gallery-latest-section .gallery .image_wrapper{
+		height:381px;		
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-top .image_wrapper{
+		height:257px;
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-bottom .image_wrapper{
+		height:91px;
+	}
+	.bangladesh-foreighn-section .foreighn .image_wrapper{
+		height:250px;
+	}
+	.economic-free-section .economic  .image_wrapper{
+		height:306px;
+	}
+	.economic-free-section .free  .image_wrapper{
+		height:200px;
+	}
+	.science-sports-section .science .image_wrapper{
+		height:234px;
+	}
+	.science-sports-section .sports-top .image_wrapper{
+		height:240px;
+	}
+	.science-sports-section .sports-bottom .image_wrapper{
+		height:200px;
+	}
+	.entertainment-life-style-section  .entertainment .image_wrapper{
+		height:213px;
+	}
+	.entertainment-life-style-section  .life-style .image_wrapper{
+		height:222px;
+	}
+	.category-section .category-top .image_wrapper {
+		height: 315px;
+    }
+	.others .image_wrapper{
+		height:210px;
+	}
+	.photo-gallery-section .gallery .image_wrapper {
+		height: 500px;
+	}
+	.video-gallery-section .latest-video .image_wrapper{
+		height:400px;
+	}
+	.video-gallery-section .latest-right .image_wrapper{
+		height:190px;
+	}
+
+}
+
+@media only screen and (max-width: 991px) {
+	.ads-center-mt {
+		text-align:center;
+	}
+	
+.gallery .title-cat{
+	display:block;
+	position:relative;
+	padding-top:5px;
+	padding-bottom: 50px;
+}	
+	.gallery .title-cat a{
+color:#000;
+}
+	.gallery .title-cat p{
+color:#000;
+}
+ 
+.gallery  .background-lenear{background:#a9a9a94d;}	
+	
+	
+}
+	
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header-top-section ul li {
+		padding: 5px 10px;
+	}
+	.nav > li > a {
+    padding: 10px 7px;
+}
+	.main-news-section .top-news .image_wrapper{
+		height:389px;
+	}
+	.top-news .title-cat {
+		right: 15px;
+		left: 15px;
+	}
+	.sub-news{
+		padding-top:30px;
+	}
+	.sub-news-top{
+		overflow:hidden;
+		float:left;
+		width:50%;
+	}
+	.sub-image-title{
+		 
+	}
+	.main-news-section .special-news .image_wrapper{
+		height:150px;
+	}
+	.main-news-section .special-news {
+		float: left;
+		overflow: ;
+		width: 34%;
+		padding-right:20px;
+	}
+	.main-news-section .special-news:last-child{
+		padding-right:0px;
+		width: 32%;
+	}
+	
+	                                                 /* seleted news section */
+	.selected-news .image_wrapper{
+		height:150px;
+	}
+	.carousel-ads img{
+		padding-top:50px;
+	}
+		                                             /* gallery-latest-section */
+	
+	
+	.gallery-latest-section .latest-news{
+		padding-right:0px;
+	}
+	.gallery-latest-section .latest .nav>li>a{
+		padding:10px 16px;
+		font-size:16px;
+	}
+
+	.gallery-latest-section .gallery{
+		padding-left:50px;
+	}
+	.gallery-latest-section .gallery .image_wrapper{
+		position:relative;
+		height:381px;		
+	}
+		                                           /* bangladesh-foreighn-section */
+	.bangladesh-foreighn-section .bangladesh{
+		padding-right:40px;
+	}
+	
+	.bangladesh-foreighn-section .bangladesh .bangladesh-top .image_wrapper{
+		position:relative;
+		height:225px;
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-bottom .image_wrapper{
+		position:relative;
+		height:46px;
+	}
+	.bangladesh-bottom .side-1{
+		padding-right:12px;
+	}
+	.bangladesh-bottom .side-1 h3 a, .bangladesh-bottom .side-2 h3 a{
+		line-height:18px;
+	}
+	.bangladesh-bottom .side-1 .side-1-left{
+		width:32%;
+		float:left;
+		padding-right:5px;
+	}
+	.bangladesh-bottom .side-1 .side-1-right{
+		width:68%;
+		float:left;
+	}
+	.bangladesh-bottom .side-2 .side-2-left{
+		width:32%;
+		float:left;
+		padding-right:5px;
+	}
+	
+	.bangladesh-bottom .side-2 .side-2-right{
+		width:68%;
+		float:left;
+	}
+	.bangladesh-bottom{
+		padding-bottom:0px;
+	}
+	.bangladesh-bottom 	ul.update-comment{
+		margin-bottom:0;
+	}
+	.bangladesh-bottom 	ul.update-comment li {
+		font-size:12px;
+	}
+	.bangladesh-bottom .side-1 h3, .bangladesh-bottom .side-2 h3{
+		margin-top:0;
+		margin-bottom:0;
+		line-height: 12px;
+	}
+	.bangladesh-bottom .side-1 h3 a, .bangladesh-bottom .side-2 h3 a{
+		font-size:14px;
+		color:#000;
+		font-weight:bold;
+		
+	}
+	.bangladesh-foreighn-section .foreighn{
+		padding-left:30px;
+	}
+	.bangladesh-foreighn-section .foreighn .image_wrapper{
+		position:relative;
+		height:170px;
+	}
+		                                          /*  economic-free-section */
+	.economic-free-section .economic{
+		padding-right:60px
+	}
+	.economic-free-section .economic-news{
+		margin-bottom:30px;
+	}
+	.economic-free-section .economic  .image_wrapper{
+		position:relative;
+		height:250px;
+	}
+	.economic-free-section .free{
+		padding-left:60px;
+	}
+	.economic-free-section .free {
+		padding-left: 10px;
+	}
+	.economic-free-section .free  .image_wrapper{
+		position:relative;
+		height:200px;
+	}
+		                                           /* science-sports-section */
+	.science-sports-section{
+		padding-bottom:20px;
+	}
+	.science-sports-section .science{
+		padding-right:60px;
+	}
+	.science-sports-section .science .image_wrapper{
+		position:relative;
+		height:190px;
+	}
+	.science-sports-section .sports-top {
+		padding-bottom: 0px;
+	}
+	.science-sports-section .sports{
+		padding-left:10px;
+	}
+	.science-sports-section .sports-top .image_wrapper{
+		position:relative;
+		height:190px;
+	}
+	.bottom-border{
+		border-bottom:1px solid #DCDCDC;
+		padding-bottom:10px;
+	}
+	.science-sports-section .sports-bottom .image_wrapper{
+		position:relative;
+		height:200px;
+	}
+	                                            /* entertainment-life-style-section */
+											  
+	.entertainment-life-style-section  .entertainment .image_wrapper{
+		position:relative;
+		height:180px;
+	}
+	.entertainment-list h3{
+		margin-top:0;
+		font-size:18px;
+	}
+	.entertainment-life-style-section  .life-style .image_wrapper{
+		position:relative;
+		height:140px;
+	}
+	                                             /* social section */
+	ul.social li{
+		padding-right:0px;
+	}
+	ul.apps li{
+		padding-right:10px;
+	}
+	ul.apps li img{
+		width: 102px;
+        height: 37px;
+	}
+		                                         /* footer-section */
+	.footer-section .footer-top .side-3{
+		min-height:186px;
+		padding-left:55px;
+	}
+		.footer-section .footer-top .side-4{
+		padding-left:55px;
+	}
+	.footer-section .footer-top .side-2{
+		border-right:1px solid #D3D3D3;
+		min-height:266px;
+		padding-left:55px;
+	}
+	.footer-section .footer-top .side-1{
+		border-right:1px solid #D3D3D3;
+		min-height:266px;
+		
+	}
+	                                                    /* category-section */
+	.category-section .category-top .image_wrapper {
+		height: 180px;
+    }
+	.others .image_wrapper{
+		height:300px;
+	}
+	.industry-business-top .image_wrapper{
+		height:300px;
+	}
+	.ads-three{
+		text-align:center;
+		padding-bottom:15px
+	}
+				                                               /* photo-gallery-section */
+
+	.photo-gallery-section .gallery .image_wrapper {
+		position: relative;
+		height: 350px;
+	}
+	
+	.video-gallery-section .latest-video .image_wrapper{
+		height:400px;
+		margin-bottom:20px;
+	}
+	.video-gallery-section .latest-right .image_wrapper{
+		height:280px;
+	}
+	
+	.video-gallery .photo-gallery{
+		margin-bottom:20px;
+	}
+	.video-top-ad{
+		margin-bottom:20px;
+	}
+	
+	
+}
+
+@media only screen and (min-width : 767px) {
+	.make-compact h3, .album-box h3{
+		height: 51px;
+		overflow: hidden;
+	}
+	
+}
+
+
+
+	
+@media only screen and (max-width : 767px) {
+     
+	                                                            /* header section */
+	.header-top-section ul li {
+        padding: 5px 16px;
+    }
+	.header-top-section .side-1{
+		float:left;
+	}
+	.header-top-section .side-2{
+		float:right;
+	}
+	.navbar-nav {
+        float: left;
+		padding-left:30px;
+    }
+	.header-menu-section .mega-menu{
+		width:inherit;
+	}
+	.header-menu-section .navbar {
+		margin-bottom: 0px;
+	}
+	.navbar-header{
+		-webkit-box-shadow: 0 4px 6px -8px #222;
+		-moz-box-shadow: 0 4px 6px -8px #222;
+		box-shadow: 0 4px 6px -8px #222;
+		padding-bottom:20px;
+	}
+	.navbar-brand{
+	padding-top: 10px;
+}
+	.navbar-default .navbar-collapse{
+		border-top:none;
+	}
+	.navbar-header h1 {
+		margin-top: 6px;
+	}
+	.header-ad-section {
+		padding-top: 25px;
+		padding-bottom: 15px;
+	}
+
+	.slider-right-cat li a {
+		font-size: 13px;
+		padding-left: 10px;
+	}
+	.searchbar  input{
+	  top:4px;
+	}	 
+	.searchsubmit, .removesearch {
+		margin-top:4px;	  
+	}
+	
+	                                                     /* selected-news-section */
+	.selected-news .image_wrapper{
+		height:230px;
+	}
+	.selected-news-section {
+		margin-top: 20px;
+	}
+
+
+	                                                     /* main news section */
+
+	.main-news-section {
+		margin-top: 20px;
+		overflow: hidden;
+	}
+	.top-news .title-cat {
+		right: 15px;
+		left: 15px;
+	}
+	.main-news-section .top-news .image_wrapper{
+		height:240px;
+	}
+    .main-news-section .sub-news{
+		padding-top:20px;
+	}
+	.sub-news-mobile{
+		clear:both;
+	}
+    .main-news-section .sub-news-top{
+		clear:both;
+	}
+	.main-news-section .sub-news-top .sub-image-title:nth-child(odd){
+		margin-right:10px;
+		float:left;
+		width:49%;
+	}
+	.main-news-section .sub-news-bottom .sub-image-title:nth-child(even){
+		float:left;
+		width:49%;
+	}
+	.main-news-section .special-news .image_wrapper{
+		height:230px;
+	}
+	
+		
+	
+	                                                         /* gallery-latest-section */
+	.gallery-latest-section {
+		margin-top: 30px;
+	}
+	.gallery-latest-section{
+		padding-bottom:5px;
+	}
+	.gallery{
+		padding-top:5px;
+	}
+	.gallery-latest-section .gallery .image_wrapper{
+		position:relative;
+		height:230px;		
+	}
+	
+		                                                     /* bangladesh-foreighn-section */
+														 
+	.bangladesh-foreighn-section {
+		padding-bottom: 0px;
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-top .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-bottom .image_wrapper{
+		position:relative;
+		height:50px;
+	}
+	.bangladesh-foreighn-section .foreighn .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	.bangladesh-bottom .side-1{
+		padding-right:12px;
+	}
+	.bangladesh-bottom .side-1 h3 a, .bangladesh-bottom .side-2 h3 a{
+		line-height:18px;
+	}
+	.bangladesh-bottom .side-1 .side-1-left{
+		width:32%;
+		float:left;
+		padding-right:5px;
+	}
+	.bangladesh-bottom .side-1 .side-1-right{
+		width:68%;
+		float:left;
+	}
+	.bangladesh-bottom .side-2 .side-2-left{
+		width:32%;
+		float:left;
+		padding-right:5px;
+	}
+	
+	.bangladesh-bottom .side-2 .side-2-right{
+		width:68%;
+		float:left;
+	}
+	.bangladesh-bottom{
+		padding-bottom:0px;
+	}
+	.bangladesh-bottom 	ul.update-comment{
+		margin-bottom:0;
+	}
+	.bangladesh-bottom 	ul.update-comment li {
+		font-size:12px;
+	}
+	.bangladesh-bottom .side-1 h3, .bangladesh-bottom .side-2 h3{
+		margin-top:0;
+		margin-bottom:0;
+		line-height: 12px;
+	}
+	.bangladesh-bottom .side-1 h3 a, .bangladesh-bottom .side-2 h3 a{
+		font-size:14px;
+		color:#000;
+		font-weight:bold;
+		
+	}
+	                                                     /* economic-free-section */
+	.economic-free-section {
+		margin-top: 0px;
+	}
+	.economic-free-section .economic  .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	.economic-free-section .free  .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	                                                    /* science-sports-section */
+	.science-sports-section{
+		padding-top:0px;
+	}
+	.science-sports-section .science .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+
+	.science-sports-section .sports-top .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	.science-sports-section .sports-bottom .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+
+	                                                    /* entertainment-life-style-section */
+	.entertainment-life-style-section{
+		padding-bottom:0;
+		margin-top: 0px;
+	}
+	.entertainment-life-style-section  .entertainment .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	.entertainment-life-style-section  .life-style .image_wrapper{
+		position:relative;
+		height:230px;
+	}
+	
+											            /* social section */
+	
+	.social-section{
+		padding-top:20px;
+		padding-bottom:20px;
+		text-align:center;
+		margin-top: 0px;
+	}
+
+	.social-section .side-2{
+		padding-top:7px;
+		padding-bottom:7px;
+		
+	}
+	.social-section	ul {
+		padding-left: inherit;
+	}
+		ul.social li {
+		text-align: left;
+	}
+
+	                                                    /* footer section */
+	
+	.footer-section .footer-top{
+		border-bottom:none;
+		padding-top:30px;
+	}
+	.footer-section .footer-top .side-1 ul, .footer-section .footer-top .side-2 ul{
+		padding-bottom:5px;
+	}
+	.footer-section .footer-top .side-1 .side-1-inner, .footer-section .footer-top .side-2 .side-2-inner, .footer-section .footer-top .side-3 .side-3-inner{
+		border-bottom:2px solid #D2D2D2;	
+	}
+	.footer-section .footer-top ul li{
+		display:inline;	
+        padding-right:20px;
+        line-height:28px;		
+	}
+	.footer-section .footer-top   h2{
+		margin-top:12px;
+		margin-bottom:5px;
+	}
+	.footer-section .footer-top .side-3  h3{
+		margin-top:0;
+		margin-bottom:10px;
+		color:#8F8989;
+		font-size:20px;
+	}
+	.footer-section .footer-top .side-4 p {
+		margin-bottom:0;
+	}
+
+	.footer-section .footer-bottom{
+		padding-top:0;
+	}
+	.footer-bottom .side-1 p, .footer-bottom  .side-2{
+		text-align:center;
+	}
+	
+	                                                        /* Detail section */
+	.detail-heading .social, .detail-heading .writer-info{
+		text-align:left;
+	}
+	.detail-heading .writer-info li.writer{
+		padding-left:5px;
+		padding-right:5px;
+		
+	}
+    .detail-heading .writer-info li{
+		font-size: 16px;
+	}
+	                                                     /* category-section */
+    .category-section .category-top .image_wrapper {
+		height: 220px;
+    }
+	.category-section .category-sub-news .sub-image-title{
+		margin-bottom:40px;
+	}
+	.category-sub-bottom {
+		margin-top: 0px;
+	}
+	.ponno-bazar-top  h3{
+		margin-top:20px;
+	}
+	.ponno-bazar-line{
+		margin-bottom:0;
+	}
+	.ponno-bazar-line-half{
+		margin-bottom:35px;
+	}
+    .category-top:not(:last-child){
+		margin-bottom:50px;
+	}
+	.grameen-economic:first-child{
+		margin-bottom:35px;
+	}
+	.industry-business{
+		margin-bottom:30px;
+	}
+	.photobox{
+		padding-left:0;
+		padding-right:0;
+	}
+	.ads-three{
+		text-align:center;
+		padding-bottom:15px
+	}
+		                                               /* photo-gallery-section */
+
+	.photo-gallery-section .gallery .image_wrapper {
+		position: relative;
+		height: 250px;
+	}
+	.photo-gallery-section .gallery { 
+	    margin-bottom:20px;
+		}
+	.video-gallery .photo-gallery{
+		margin-bottom:20px;
+	}
+	
+	.video-top-ad{
+		margin-bottom:20px;
+	}
+	
+	.ad-sm{ padding-top:20px;}
+}
+
+@media only screen and (min-width: 479px) and (max-width: 767px) {
+	
+	                                  
+									  /* all image wrapper height */
+									  
+	.category-section .category-top .image_wrapper {
+		height: 300px;
+    }
+	.category-section .category-sub-news .image_wrapper{
+		height:120px;
+	}
+	.more-image .image_wrapper{
+		height:250px;
+	}
+	.industry-business-top .image_wrapper{
+		height:300px;
+	}
+	.others .image_wrapper{
+		height:300px;
+	}
+	.ponno-bazar-top .image_wrapper{
+		height:300px; 
+	 }
+	.grameen-economic .image_wrapper{
+		height:300px;
+	}
+	.ponno-bazar-bottom .image_wrapper{
+		height:120px;
+	}
+
+	.photo-gallery-section .gallery .image_wrapper {
+		position: relative;
+		height: 300px;
+	}
+	.video-gallery-section .latest-video .image_wrapper{
+		height:320px;
+		margin-bottom:20px;
+	}
+	.video-gallery-section .latest-right .image_wrapper{
+		height:250px;
+	}
+	.photo-gallery-album-section  .album .image_wrapper{
+		height:300px;
+	}
+	
+}
+
+@media only screen and (max-width: 480px){
+	.navbar-brand img{
+		width:220px;
+	}
+
+	                                            /* all image wrapper height */
+    .main-news-section .top-news .image_wrapper{
+		height:210px;
+	}	
+	.main-news-section .special-news .image_wrapper{
+		height:180px;
+	}
+	.selected-news .image_wrapper{
+		height:180px;
+	}
+	.gallery-latest-section .gallery .image_wrapper{
+		height:220px;		
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-top .image_wrapper{
+		height:200px;
+	}
+	.bangladesh-foreighn-section .bangladesh .bangladesh-bottom .image_wrapper{
+		height:50px;
+	}
+	.bangladesh-foreighn-section .foreighn .image_wrapper{
+		height:220px;
+	}
+	.economic-free-section .economic  .image_wrapper{
+		height:210px;
+	}
+	.economic-free-section .free  .image_wrapper{
+		height:220px;
+	}
+	.science-sports-section .science .image_wrapper{
+		height:220px;
+	}
+	.science-sports-section .sports-top .image_wrapper{
+		height:220px;
+	}
+	.science-sports-section .sports-bottom .image_wrapper{
+		height:220px;
+	}
+	.entertainment-life-style-section  .entertainment .image_wrapper{
+		height:220px;
+	}
+	.entertainment-life-style-section  .life-style .image_wrapper{
+		height:220px;
+	}
+	.category-section .category-top .image_wrapper {
+		height: 315px;
+    }
+	.others .image_wrapper{
+		height:210px;
+	}
+	.photo-gallery-section .gallery .image_wrapper {
+		height: 300px;
+	}
+	.video-gallery-section .latest-video .image_wrapper{
+		height:210px;
+		margin-bottom:20px;
+	}
+	.video-gallery-section .latest-right .image_wrapper{
+		height:190px;
+	}
+	.photo-gallery-album-section  .album .image_wrapper{
+		height:250px;
+	}
+}
+
+

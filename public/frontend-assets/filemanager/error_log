@@ -1,0 +1,487 @@
+[30-Nov-2017 21:41:33 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shell.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[01-Dec-2017 11:47:20 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/kntl.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[01-Dec-2017 11:47:20 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/brudul.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[05-Dec-2017 11:53:33 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[05-Dec-2017 23:17:19 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/zioalfino.php;.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[05-Dec-2017 23:39:15 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/zioalfino.php.;.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[06-Dec-2017 15:18:40 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[12-Dec-2017 19:00:37 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[12-Dec-2017 19:02:33 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[15-Dec-2017 01:17:50 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/asus.PhP.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[18-Dec-2017 14:30:57 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/tt.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[24-Dec-2017 00:37:50 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/DarkFriends.php;.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[24-Dec-2017 18:03:03 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[24-Dec-2017 18:03:55 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[25-Dec-2017 03:40:14 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/p0.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[26-Dec-2017 06:49:15 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[26-Dec-2017 12:52:01 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/C99.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[29-Dec-2017 18:03:31 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[31-Dec-2017 01:05:05 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/andela.php.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[31-Dec-2017 01:05:52 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/andela.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[31-Dec-2017 01:08:16 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/andela.php.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[02-Jan-2018 14:08:40 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/wso.php.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[04-Jan-2018 22:07:43 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[04-Jan-2018 22:08:55 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[04-Jan-2018 22:12:23 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[04-Jan-2018 22:15:43 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[04-Jan-2018 22:17:51 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[07-Jan-2018 01:46:40 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[08-Jan-2018 12:05:21 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[08-Jan-2018 18:15:30 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[09-Jan-2018 17:19:26 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/admin/ace.php.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[10-Jan-2018 18:16:01 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/pct/ByMe-1-1.htm.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[10-Jan-2018 18:19:03 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/pct/act.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[11-Jan-2018 13:26:10 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/class.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[22-Jan-2018 19:28:08 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/Anon.png): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[23-Jan-2018 06:31:16 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[26-Jan-2018 20:30:48 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/script.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[27-Jan-2018 23:48:42 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[28-Jan-2018 18:06:56 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/asw.php.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[29-Jan-2018 21:32:42 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[29-Jan-2018 21:37:17 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[29-Jan-2018 21:38:23 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[30-Jan-2018 20:05:09 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[02-Feb-2018 17:30:35 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shell.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[02-Feb-2018 18:40:15 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[03-Feb-2018 10:43:00 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/AppProject/up.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[03-Feb-2018 10:43:51 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/AppProject/up.php.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[03-Feb-2018 20:12:50 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/t.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[03-Feb-2018 21:02:27 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/resetv3.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[04-Feb-2018 10:50:47 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shell.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[09-Feb-2018 04:23:12 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[10-Feb-2018 01:46:52 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/b374k.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[10-Feb-2018 22:27:31 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/bypass.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[11-Feb-2018 11:21:12 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[11-Feb-2018 11:21:15 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[12-Feb-2018 01:45:40 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/k2.php.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-Feb-2018 00:46:29 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[13-Feb-2018 16:23:51 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/angel.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-Feb-2018 17:54:39 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shell.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[16-Feb-2018 17:22:13 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[17-Feb-2018 21:00:33 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/crit.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[17-Feb-2018 21:02:17 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/crit.php_1.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[17-Feb-2018 21:02:31 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shellgambar.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[19-Feb-2018 19:45:43 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[19-Feb-2018 19:45:43 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[20-Feb-2018 13:00:56 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/index.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[23-Feb-2018 21:59:23 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/press council president.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[23-Feb-2018 21:59:26 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/fauzLove.txt): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[23-Feb-2018 21:59:31 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/shirin sharmin.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[26-Feb-2018 11:19:10 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shell.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[26-Feb-2018 11:25:15 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/shell.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[07-Mar-2018 17:26:29 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[08-Mar-2018 13:52:14 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[09-Mar-2018 14:15:21 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/save gaza.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[09-Mar-2018 14:19:14 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/save gaza_1.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[09-Mar-2018 17:42:44 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/m1n3.php.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[09-Mar-2018 20:07:13 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/Blackshadow.php.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[11-Mar-2018 14:57:19 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/aw.html.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-Mar-2018 16:35:54 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/backdoor.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-Mar-2018 16:36:02 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/backdoor.php_1.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[14-Mar-2018 22:11:46 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[14-Mar-2018 22:12:21 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[14-Mar-2018 22:13:39 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[14-Mar-2018 22:55:07 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[15-Mar-2018 22:18:50 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:18:57 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:19:01 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:19:46 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:27:28 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:27:38 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:27:46 Asia/Dhaka] PHP Fatal error:  Class 'ZipArchive' not found in /home/bkhabor/public_html/assets/filemanager/ajax_calls.php on line 56
+[15-Mar-2018 22:28:46 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/c99.php.png.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[17-Mar-2018 08:12:47 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/apik.html.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[17-Mar-2018 17:35:02 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[17-Mar-2018 17:36:01 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[18-Mar-2018 15:17:09 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[18-Mar-2018 18:56:30 Asia/Dhaka] PHP Warning:  strpos(): Offset not contained in string in /home/bkhabor/public_html/assets/filemanager/execute.php on line 9
+[26-Mar-2018 05:25:00 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/hacked123456.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[26-Mar-2018 05:26:01 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/hacked123456.php.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[27-Mar-2018 10:57:37 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/rscyber9.txt): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[28-Mar-2018 20:28:57 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[01-Apr-2018 07:00:47 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/hacked123456.php.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:00:56 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/libor.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:01:09 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/1U2A4408.JPG): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:01:15 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/1U2A5728.JPG): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:01:21 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/regular_1486_news_1522253875_1.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:01:29 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/US-Bangla_2.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:01:37 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/Js1.txt): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[01-Apr-2018 07:02:21 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/centralbg.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[06-Apr-2018 23:52:24 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/1111.png is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[25-Mar-2020 15:55:24 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 15:55:24 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 15:55:24 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[25-Mar-2020 16:27:41 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 16:27:41 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 16:27:41 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[25-Mar-2020 16:28:34 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 16:28:34 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 16:28:34 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[25-Mar-2020 16:28:58 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 16:28:58 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[25-Mar-2020 16:28:58 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[28-Mar-2020 06:48:34 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/cmd5.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[28-Mar-2020 13:18:49 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[11-Apr-2020 15:48:20 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/v5.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[21-Apr-2020 08:00:30 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/c99 - Copia.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[21-Apr-2020 08:02:46 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/c99 - Copia_1.jpeg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[25-Apr-2020 21:10:04 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[04-May-2020 12:09:44 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/1chouddagram news ooo-14.04.2020.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[04-May-2020 12:24:13 Asia/Dhaka] PHP Warning:  unlink(../../resources/uploaded/neymar.jpg): No such file or directory in /home/bkhabor/public_html/assets/filemanager/execute.php on line 58
+[09-May-2020 18:29:14 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/MARIJUANA.php.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[09-May-2020 18:29:39 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/MARIJUANA.php_1.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[09-May-2020 18:29:58 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/MARIJUANA.php_2.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-May-2020 02:59:53 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/ny.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-May-2020 03:06:53 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/ny.php is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-May-2020 03:16:01 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/tenor.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[13-May-2020 03:17:34 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/rce.gif is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[31-May-2020 16:23:30 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:23:30 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:23:30 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[31-May-2020 16:23:42 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:23:42 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:23:42 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[31-May-2020 16:24:16 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:24:16 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:24:16 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[31-May-2020 16:24:25 Asia/Dhaka] PHP Warning:  move_uploaded_file(../../resources/uploaded/Chandpur Lanch Ghat Pic-2.jpg): failed to open stream: No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 60
+[31-May-2020 16:24:25 Asia/Dhaka] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4xwget' to '../../resources/uploaded/Chandpur Lanch Ghat Pic-2.jpg' in /home/bkhabor/public_html/assets/filemanager/upload.php on line 60
+[31-May-2020 16:24:25 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[31-May-2020 16:33:17 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:33:17 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:33:17 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[31-May-2020 16:33:30 Asia/Dhaka] PHP Warning:  move_uploaded_file(../../resources/uploaded/Chandpur Lanch Ghat Pic-2.jpg): failed to open stream: No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 60
+[31-May-2020 16:33:30 Asia/Dhaka] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpgifXGF' to '../../resources/uploaded/Chandpur Lanch Ghat Pic-2.jpg' in /home/bkhabor/public_html/assets/filemanager/upload.php on line 60
+[31-May-2020 16:33:30 Asia/Dhaka] PHP Warning:  chmod(): No such file or directory in /home/bkhabor/public_html/assets/filemanager/upload.php on line 61
+[31-May-2020 16:33:32 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:33:32 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[31-May-2020 16:33:32 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[01-Jun-2020 08:29:19 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[01-Jun-2020 08:29:19 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[01-Jun-2020 08:29:19 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[01-Jun-2020 13:16:37 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[01-Jun-2020 13:16:37 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[01-Jun-2020 13:16:37 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[02-Jun-2020 13:43:08 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[02-Jun-2020 13:43:08 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[02-Jun-2020 13:43:08 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[02-Jun-2020 13:44:19 Asia/Dhaka] PHP Warning:  scandir(../../resources/uploaded/): failed to open dir: No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[02-Jun-2020 13:44:19 Asia/Dhaka] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 332
+[02-Jun-2020 13:44:19 Asia/Dhaka] PHP Warning:  Invalid argument supplied for foreach() in /home/bkhabor/public_html/assets/filemanager/dialog.php on line 339
+[11-Jun-2020 19:44:29 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/ii.php.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
+[11-Jun-2020 19:50:07 Asia/Dhaka] PHP Fatal error:  Uncaught exception 'Exception' with message 'file ../../resources/uploaded/ii.php_1.jpg is missing or invalid' in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php:325
+Stack trace:
+#0 /home/bkhabor/public_html/assets/filemanager/include/utils.php(47): imageLib->resizeImage(122, 91, 'crop')
+#1 /home/bkhabor/public_html/assets/filemanager/upload.php(65): create_img_gd('../../resources...', '../../resources...', 122, 91)
+#2 {main}
+  thrown in /home/bkhabor/public_html/assets/filemanager/include/php_image_magician.php on line 325
