@@ -60,7 +60,7 @@
                                                                 <a href="{{ route('my-ads.edit', $ad->id) }}" class="btn btn-info">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('my-ads.destroy', $ad->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('my-ads.destroy', $ad->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

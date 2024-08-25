@@ -54,7 +54,7 @@
                                                                 <a href="{{ route('tags.edit', $tag->id) }}" class="btn btn-info">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('tags.destroy', $tag->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('tags.destroy', $tag->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

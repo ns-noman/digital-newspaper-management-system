@@ -19,6 +19,7 @@ class HomeController extends Controller
     {
         // $start = microtime(true); 
         // $end = microtime(true);$executionTime = $end - $start;echo "Query Execution Time: {$executionTime} seconds";die();
+
         $data['topread'] = [];
         $data['topcomment'] = [];
         $statusCon = ['IsActive' => 1];
@@ -28,11 +29,10 @@ class HomeController extends Controller
         $select1 = ['id', 'HomepageTitle', 'NewsCategoryID', 'Thumbimage', 'TileUrl', 'CategoryName', 'CategoryBngName'];
             
         $data['breaking'] = News::where($statusCon)->where('IsBreaking', 1)->where('BreakingTime', '>=', date('Y-m-d h:i:s'))->select(['id', 'HomepageTitle', 'NewsTitle', 'TileUrl', 'CategoryName'])->take(5)->get()->toArray();
-        $data['leadNews'] = News::where($statusCon)->select('id', 'HomepageTitle', 'NewsSummary', 'NewsCategoryID', 'Thumbimage', 'MediumImage', 'TileUrl', 'CategoryName', 'CategoryBngName', 'ImageTag', 'Date', 'NewsHanger', 'NewsShoulder')->where('IsTop', 1)->orderByDesc("id")->take(5)->get()->toArray();//->orderByRaw("Priority asc, id desc")
+        $data['leadNews'] = News::where($statusCon)->select('id', 'HomepageTitle', 'NewsSummary', 'NewsCategoryID', 'Thumbimage', 'MediumImage', 'TileUrl', 'CategoryName', 'CategoryBngName', 'ImageTag', 'Date', 'NewsHanger', 'NewsShoulder')->where('IsTop', 1)->orderByDesc("id")->take(5)->get()->toArray();//->orderByRaw("Priority asc, id desc")->orderByDesc("id")
         $data['editorchoice'] = News::where($statusCon)->select('id', 'HomepageTitle', 'NewsSummary', 'NewsCategoryID', 'Thumbimage', 'MediumImage', 'TileUrl', 'CategoryName', 'CategoryBngName', 'ImageTag', 'Date')->where('IsEditorChoice', 1)->orderByDesc('id')->limit(3)->get()->toArray();//->orderBy('EditorChoicePriority', 'asc')
         $data['selected'] = News::where($statusCon)->select('id', 'HomepageTitle', 'NewsCategoryID', 'Thumbimage', 'MediumImage', 'TileUrl', 'CategoryName', 'CategoryBngName', 'ImageTag', 'Date')->where('IsSeleted', 1)->orderByDesc('id')->limit(12)->get()->toArray();//->orderByRaw('SelectedPriority asc,id desc')
         $data['recent'] = News::where($statusCon)->select('id', 'HomepageTitle', 'NewsCategoryID', 'NewsSummary', 'Thumbimage', 'MediumImage', 'TileUrl', 'CategoryName', 'CategoryBngName', 'ImageTag', 'Date')->where('IsRecent', 1)->orderByDesc('id')->limit(6)->get()->toArray();
-        
         $data['onlinepoll'] = Poll::where($statusCon)->where('IsClosed', 'No')->orderByDesc('id')->first()->toArray();
         $data['galleryphoto'] = Gallery::where($statusCon)->where('GalleryType', 1)->orderByDesc('id')->first()->toArray();
         $data['gallerysubcategory'] = Category::where($statusCon)->where('ParentID', 30)->orderBy('Priority', 'asc')->take(6)->get()->toArray();

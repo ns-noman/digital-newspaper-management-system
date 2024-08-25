@@ -40,7 +40,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">{{ $data['title'] }} Form</h3>
                             </div>
-                            <form action="{{ isset($data['item']) ? route('news.update',$data['item']->id) : route('news.store'); }}" method="POST" enctype="multipart/form-data">
+                            <form id="newsForm" action="{{ isset($data['item']) ? route('news.update',$data['item']->id) : route('news.store'); }}" method="POST" enctype="multipart/form-data">
                                 @csrf()
                                 @if(isset($data['item']))
                                     @method('put')
@@ -155,7 +155,9 @@
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12">
                                             <label class="form-label">Detail*</label>
-                                            <textarea class="form-control" id="DetailNews" name="DetailNews" placeholder="DetailNews" required>{{ isset($data['item']) ? $data['item']->DetailNews  : null }}</textarea>
+                                            <textarea class="form-control" id="DetailNews" name="DetailNews" placeholder="DetailNews">{{ isset($data['item']) ? $data['item']->DetailNews  : null }}</textarea>
+                                            <input type="hidden" id="DetailNewsHidden" name="DetailNewsHidden">
+                                            <div id="error-message" style="color: red; display: none;">News details are required.</div>
                                         </div>
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12">
                                             <label class="form-label">Summary</label>
@@ -191,7 +193,7 @@
                                         </div>
                                         <div class="form-group col-sm-2 col-md-2 col-lg-2">
                                             <label>ALT Tag</label>
-                                            <input placeholder="ALT Tag" type="text" class="form-control" id="ImageTag" name="ImageTag" value="{{ isset($data['item']) ? $data['item']->ImageTag  : null }}" required>
+                                            <input placeholder="ALT Tag" type="text" class="form-control" id="ImageTag" name="ImageTag" value="{{ isset($data['item']) ? $data['item']->ImageTag  : null }}">
                                         </div>
                                         <div class="form-group col-sm-3 col-md-3 col-lg-3">
                                             <label>Writer</label>
@@ -203,8 +205,7 @@
                                         </div>
                                         <div class="form-group col-sm-7 col-md-7 col-lg-7">
                                             <label>Related Post</label>
-                                            <select id="RelatedNews" name="RelatedNews[]" class="form-control" multiple="multiple" data-placeholder="Source" style="width: 100%;">
-                                            </select>
+                                            <select id="RelatedNews" name="RelatedNews[]" class="form-control" multiple="multiple" data-placeholder="Source" style="width: 100%;"></select>
                                         </div>
                                         <div class="form-group col-sm-3 col-md-3 col-lg-3">
                                             <label>Recent*</label>
@@ -313,6 +314,41 @@
         height: 150
     });
 
+    $('form').on('submit', function(e){
+        var content = $('#DetailNews').summernote('code');
+        var content = $('<div>').html(content).text();
+        let input = document.getElementById("Image");
+        let isCreate = "{{ !isset($data['item']) }}";
+        if(!(input.files && input.files[0]) && isCreate){
+            e.preventDefault();
+            custWarning("Please Select News Image!");
+        }
+        if(!content){
+            e.preventDefault();
+            custWarning("News Details is empty!");
+        }
+    });
+
+
+    function custWarning(title) {
+        return Swal.fire({
+            title: title,
+                showClass: {
+                popup: `
+                    animate__animated
+                    animate__fadeInUp
+                    animate__faster
+                `
+                },
+                hideClass: {
+                popup: `
+                    animate__animated
+                    animate__fadeOutDown
+                    animate__faster
+                `
+                }
+            });
+    }
     function profile(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();

@@ -66,7 +66,7 @@
                                                                 <a href="{{ route('reporters.edit', $reporter->id) }}" class="btn btn-info">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('reporters.destroy', $reporter->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('reporters.destroy', $reporter->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

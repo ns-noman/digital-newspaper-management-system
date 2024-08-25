@@ -7,7 +7,7 @@
                     <div class="album">
                         <h2>জরিপ ফলাফল</h2>
                         <div class="row">
-                            @foreach ($data['onlinepoll']->items() as $key => $row)
+                            @foreach ($data['onlinepoll'] as $key => $row)
                                 @php
                                     $yes = $row['PositiveComment'];
                                     $no = $row['NegativeComment'];
@@ -38,7 +38,6 @@
                             @endforeach
                         </div>
                     </div>
-                    {!! $data['onlinepoll']->links() !!}
                 </div>
                 <div class="col-md-6 ads-center-mt">
                     <a href="http://www.maguragroup.com.bd/" target="_blank">

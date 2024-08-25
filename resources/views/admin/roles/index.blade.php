@@ -51,7 +51,7 @@
                                                             class="btn btn-info">
                                                             <i class="fa-solid fa-pen-to-square"></i>
                                                         </a>
-                                                        <form action="{{ route('roles.destroy', $role->id) }}" method="post">
+                                                        <form class="delete" action="{{ route('roles.destroy', $role->id) }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit" class="btn btn-danger">

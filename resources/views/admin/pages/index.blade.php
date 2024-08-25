@@ -54,7 +54,7 @@
                                                                 <a href="{{ route('pages.edit', $page->id) }}" class="btn btn-info">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('pages.destroy', $page->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('pages.destroy', $page->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

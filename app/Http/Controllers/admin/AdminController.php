@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Category;
 use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\Controller;
 use Auth;
 use Hash;
@@ -104,14 +105,39 @@ class AdminController extends Controller
             return redirect()->route('dashboard.index');
         }
         if ($request->isMethod('post')) {
+            
             $request->validate([
                 'email' => 'required|email|max:255',
                 'password' => 'required',
+                'g-recaptcha-response' => 'required',
             ], [
                 'email.email' => 'Please enter a valid email',
                 'email.required' => 'Email is required',
                 'password.required' => 'Password is required',
+                // 'g-recaptcha-response.required' => 'reCaptcha is required',
             ]);
+ 
+            // $token = $request->input('g-recaptcha-response');
+            // $siteKey = '6Lc1Qy4qAAAAAAQ8Gnv1aPGOVVCUSAky1U_loJan';
+            // $secret = '6Lc1Qy4qAAAAAEzsPzPU70oU1j930YjySg9Hm7Yy';
+            // $projectId = 'bdpressholdings-1724495125060';
+            // $apiKey = 'AIzaSyDrELpE8ooQVuzI305hK-fpwDZ7oRCzzG0';
+            
+            // $response = Http::post("https://recaptchaenterprise.googleapis.com/v1/projects/{$projectId}/assessments?key={$apiKey}", [
+            //     'event' => [
+            //         'token' => $token,
+            //         'siteKey' => $siteKey,
+            //     ],
+            // ]);
+        
+            // $responseBody = $response->json();
+            // if (!isset($responseBody['tokenProperties']['valid']) || !$responseBody['tokenProperties']['valid']) {
+            //     return redirect()->back()->withErrors(['recaptcha' => 'reCAPTCHA verification failed.']);
+            // }
+            // if (!isset($responseBody['riskAnalysis']['score']) || $responseBody['riskAnalysis']['score']<0.5){
+            //     return redirect()->back()->withErrors(['recaptcha' => 'reCAPTCHA score is too low.']);
+            // }
+       
             $credentials = $request->only('email', 'password');
             $credentials['status'] = 1;
             $remember = $request->filled('remember_me');

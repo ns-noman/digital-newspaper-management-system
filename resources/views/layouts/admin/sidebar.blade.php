@@ -23,7 +23,7 @@
                     <li class="nav-item">
                         <a href="{{ route('news.index') }}"
                             class="nav-link {{ request()->is('admin/news*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-newspaper"></i>
                             <p>News <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('news.create') }}"></i></p>
                         </a>
                     </li>
@@ -32,7 +32,7 @@
                     <li class="nav-item {{ request()->is('admin/basic-infos*') ? 'menu-open' : '' }}">
                         <a href="{{ url('admin/basic-infos') }}"
                             class="nav-link {{ request()->is('admin/basic-infos*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-gear"></i>
                             <p>Basic Info Manage</p>
                         </a>
                     </li>
@@ -40,7 +40,7 @@
                 @if ($authorization->hasMenuAccess(4))
                     <li class="nav-item {{ request()->is('admin/admin*') ? 'menu-open' : '' }}">
                         <a href="#" class="nav-link {{ request()->is('admin/admin*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-users-line"></i>
                             <p>
                                 Admin
                                 <i class="fas fa-angle-left right"></i>
@@ -72,7 +72,7 @@
                 <li class="nav-item">
                         <a href="{{ route('categories.index') }}"
                             class="nav-link {{ request()->is('admin/categories*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-puzzle-piece"></i>
                             <p>Category <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('categories.create') }}"></i></p>
                         </a>
                         
@@ -82,7 +82,7 @@
                     <li class="nav-item">
                         <a href="{{ route('tags.index') }}"
                             class="nav-link {{ request()->is('admin/tags*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-tag"></i>
                             <p>Tags <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('tags.create') }}"></i></p>
                         </a>
                     </li>
@@ -91,7 +91,7 @@
                     <li class="nav-item">
                         <a href="{{ route('writers.index') }}"
                             class="nav-link {{ request()->is('admin/writers*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-pen-fancy"></i>
                             <p>Writers <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('writers.create') }}"></i></p>
                         </a>
                     </li>
@@ -100,7 +100,7 @@
                     <li class="nav-item">
                         <a href="{{ route('reporters.index') }}"
                             class="nav-link {{ request()->is('admin/reporters*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-user-tie"></i>
                             <p>Reporters <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('reporters.create') }}"></i></p>
                         </a>
                     </li>
@@ -109,7 +109,7 @@
                     <li class="nav-item">
                         <a href="{{ route('pages.index') }}"
                             class="nav-link {{ request()->is('admin/pages*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-file-lines"></i>
                             <p>Pages <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('pages.create') }}"></i></p>
                         </a>
                     </li>
@@ -118,7 +118,7 @@
                     <li class="nav-item">
                         <a href="{{ route('polls.index') }}"
                             class="nav-link {{ request()->is('admin/polls*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-chart-simple"></i>
                             <p>Polls <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('polls.create') }}"></i></p>
                         </a>
                     </li>
@@ -127,7 +127,7 @@
                     <li class="nav-item">
                         <a href="{{ route('galleries.index') }}"
                             class="nav-link {{ request()->is('admin/galleries*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-images"></i>
                             <p>Gallery <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('galleries.create') }}"></i></p>
                         </a>
                     </li>
@@ -136,7 +136,7 @@
                     <li class="nav-item">
                         <a href="{{ route('ads-positions.index') }}"
                             class="nav-link {{ request()->is('admin/ads-positions*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-solid fa-map-pin"></i>
                             <p>Ads Positions <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('ads-positions.create') }}"></i></p>
                         </a>
                     </li>
@@ -145,7 +145,7 @@
                     <li class="nav-item">
                         <a href="{{ route('my-ads.index') }}"
                             class="nav-link {{ request()->is('admin/my-ads*') ? 'active' : '' }}">
-                            <i class="nav-icon fas fa-edit"></i>
+                            <i class="nav-icon fa-brands fa-buysellads"></i>
                             <p>Ads <i class="fas right fa-solid fa-plus add-new p-1" add-new="{{ route('my-ads.create') }}"></i></p>
                         </a>
                     </li>

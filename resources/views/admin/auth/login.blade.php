@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $basicInfo->title }}</title>
+    <title>{{ $basicInfo->SiteName }}</title>
     <link rel="shortcut icon" href="{{ asset('public/uploads/basic-info/'. $basicInfo->FavIcon) }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -17,6 +17,10 @@
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .container-fluid {
@@ -27,15 +31,13 @@
         }
 
         .main-content {
-            width: 100%;
-            max-width: 800px;
-            margin: 5em auto;
-            margin-top: 3em;
-            margin-bottom: 3em;
+            width: 800px; /* Fixed width for main content */
             display: flex;
             border-radius: 20px;
             box-shadow: 0 5px 5px rgba(0, 0, 0, .4);
             overflow: hidden;
+            background-color: #fff;
+            margin: 0 auto;
         }
 
         .company__info {
@@ -43,6 +45,7 @@
             color: #fff;
             padding: 2em;
             text-align: center;
+            flex: 1;
         }
 
         .company__logo {
@@ -145,6 +148,7 @@
         @media screen and (max-width: 768px) {
             .main-content {
                 flex-direction: column;
+                width: 100%;
                 max-width: 100%;
             }
 
@@ -163,19 +167,20 @@
             }
         }
     </style>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc1Qy4qAAAAAAQ8Gnv1aPGOVVCUSAky1U_loJan"></script>
 </head>
 
 <body>
     <!-- Main Content -->
     <div class="container-fluid">
-        <div class="row main-content bg-success">
-            <div class="col-md-4 company__info">
+        <div class="main-content">
+            <div class="company__info">
                 <div class="company__logo">
-                    <span class="fa fa-android"></span>
+                    <a href="{{ route('home.index') }}"><img src="{{ asset('public/uploads/basic-info/Logo2.png') }}" alt="{{ $basicInfo->SiteName }}"></a>
                 </div>
                 <h4 class="company__title">{{ $basicInfo->SiteName }}</h4>
             </div>
-            <div class="col-md-8 login_form">
+            <div class="login_form">
                 <div class="container-fluid">
                     <h2 class="text-center">Login Panel</h2>
                     <form id="loginForm" method="POST" action="{{ route('admin.login') }}" class="form-group">
@@ -200,6 +205,15 @@
                             <label for="remember_me">Remember Me!</label>
                         </div>
                         <div class="form-group">
+                            <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="error-message">{{ $errors->first('g-recaptcha-response') }}</span>
+                            @endif
+                            @error('recaptcha')
+                                <div class="error">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <input type="submit" value="Submit" class="btn">
                         </div>
                     </form>
@@ -208,25 +222,31 @@
         </div>
     </div>
     <script>
-        function togglePassword() {
-            var passwordField = document.getElementById("password");
-            var toggleIcon = document.querySelector(".toggle-password");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-                toggleIcon.classList.remove("fa-eye");
-                toggleIcon.classList.add("fa-eye-slash");
-            } else {
-                passwordField.type = "password";
-                toggleIcon.classList.remove("fa-eye-slash");
-                toggleIcon.classList.add("fa-eye");
-            }
+        function handleSubmit(event) {
+            event.preventDefault();
+            grecaptcha.enterprise.ready(function() {
+                grecaptcha.enterprise.execute('6Lc1Qy4qAAAAAAQ8Gnv1aPGOVVCUSAky1U_loJan', {action: 'submit'}).then(function(token) {
+                    document.getElementById('recaptchaResponse').value = token;
+                    document.getElementById('loginForm').submit();
+                });
+            });
         }
-        function copyCredentials(rowId) {
-            var emailField = document.getElementById("email" + rowId);
-            var passwordField = document.getElementById("password" + rowId);
-            document.getElementById("username").value = emailField.textContent.trim();
-            document.getElementById("password").value = passwordField.textContent.trim();
+        document.getElementById('loginForm').addEventListener('submit', handleSubmit);
+    </script>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const toggleIcon = document.querySelector(".toggle-password");
+            
+            const isPasswordVisible = passwordField.type === "text";
+            passwordField.type = isPasswordVisible ? "password" : "text";
+            toggleIcon.classList.toggle("fa-eye", isPasswordVisible);
+            toggleIcon.classList.toggle("fa-eye-slash", !isPasswordVisible);
+            
+            passwordField.focus();
         }
     </script>
+
 </body>
 </html>

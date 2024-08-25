@@ -64,7 +64,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ route('home.index') }}">
-                    <img class="img-responsive-2" src="{{ asset('public/uploads/basic-info/logo2.png') }}" alt="বাংলাদেশের খবর">
+                    <img class="img-responsive-2" src="{{ asset('public/uploads/basic-info/Logo2.png') }}" alt="বাংলাদেশের খবর">
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

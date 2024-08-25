@@ -58,7 +58,7 @@
                                                                 <a href="{{ route('galleries.edit', $gallery->id) }}" class="btn btn-info">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('galleries.destroy', $gallery->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('galleries.destroy', $gallery->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

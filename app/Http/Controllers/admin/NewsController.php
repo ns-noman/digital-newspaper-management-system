@@ -11,17 +11,17 @@ use App\Models\Writer;
 use App\Models\Tag;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Auth;
-
+use Illuminate\Support\Str;
 use Spatie\Image\Image;
 use Spatie\Image\Manipulations;
+use Auth;
 
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::with(['category','admin'])->orderBy('id', 'desc')->paginate(10);
+        $news = News::select(['id','NewsTitle','Date','ReporterName'])->with(['category','admin'])->orderBy('id','desc')->paginate(10);
         return view('admin.news.index', compact('news'));
     }
 
@@ -56,7 +56,9 @@ class NewsController extends Controller
         $data["SelectedPriority"] = $data["IsSeleted"] == 1 ? $request->SelectedPriority : 13;
         $data["EditorChoicePriority"] = $data["IsEditorChoice"] == 1 ? $request->EditorChoicePriority : 13;
         $data['TagWord'] = (isset($_POST["TagWord"]) && !empty($_POST["TagWord"])) ?  implode(",", $_POST["TagWord"]) : "";
-        if (strlen(trim($data["NewsSummary"])) < 1) $data["NewsSummary"] = (strlen(trim($data['DetailNews'])) > 1) ?  word_limiter(strip_tags($data['DetailNews']), 25, "...") : "";
+
+        if (strlen(trim($data["NewsSummary"])) < 1) $data["NewsSummary"] = (strlen(trim($data['DetailNews'])) > 1) ?  Str::words(strip_tags($data['DetailNews']),25,'...') : "";
+
         $images = $this->processImage($data['Image']);
         $data['Image'] = $images['Image'];
         $data['MediumImage'] = $images['MediumImage'];
@@ -86,7 +88,7 @@ class NewsController extends Controller
         $data["SelectedPriority"] = $data["IsSeleted"] == 1 ? $request->SelectedPriority : 13;
         $data["EditorChoicePriority"] = $data["IsEditorChoice"] == 1 ? $request->EditorChoicePriority : 13;
         $data['TagWord'] = (isset($_POST["TagWord"]) && !empty($_POST["TagWord"])) ?  implode(",", $_POST["TagWord"]) : "";
-        if (strlen(trim($data["NewsSummary"])) < 1) $data["NewsSummary"] = (strlen(trim($data['DetailNews'])) > 1) ?  word_limiter(strip_tags($data['DetailNews']), 25, "...") : "";
+        if (strlen(trim($data["NewsSummary"])) < 1) $data["NewsSummary"] = (strlen(trim($data['DetailNews'])) > 1) ?  Str::words(strip_tags($data['DetailNews']),25,'...') : "";
         if(isset($data['Image'])){
             unlink(public_path('uploads/news/'.$news->Image));
             unlink(public_path('uploads/news/'.$news->MediumImage));
@@ -106,29 +108,29 @@ class NewsController extends Controller
 
     public function destroy($id)
     {
-        try {
-            $news = News::findOrFail($id);
-            if (1 > 3) {
-                throw new \Exception('Cannot delete news with associated post!');
-            }
-            if($news->Image){
-                unlink(public_path('uploads/news/'.$news->Image));
-                unlink(public_path('uploads/news/'.$news->MediumImage));
-                unlink(public_path('uploads/news/'.$news->Thumbimage));
-            }
-            $news->delete();
-            NewsDetails::where(["NewsID" => $news->id])->delete();
-            NewsInfo::where(["NewsID" => $news->id])->delete();
-            return redirect()->back()->with('alert', [
-                'messageType' => 'success',
-                'message' => 'News Deleted Successfully!'
-            ]);
-        } catch (\Exception $e) {
-            return redirect()->back()->with('alert', [
-                'messageType' => 'warning',
-                'message' => $e->getMessage()
-            ]);
-        }
+        // try {
+        //     $news = News::findOrFail($id);
+        //     if (1 > 3) {
+        //         throw new \Exception('Cannot delete news with associated post!');
+        //     }
+        //     if($news->Image){
+        //         unlink(public_path('uploads/news/'.$news->Image));
+        //         unlink(public_path('uploads/news/'.$news->MediumImage));
+        //         unlink(public_path('uploads/news/'.$news->Thumbimage));
+        //     }
+        //     $news->delete();
+        //     NewsDetails::where(["NewsID" => $news->id])->delete();
+        //     NewsInfo::where(["NewsID" => $news->id])->delete();
+        //     return redirect()->back()->with('alert', [
+        //         'messageType' => 'success',
+        //         'message' => 'News Deleted Successfully!'
+        //     ]);
+        // } catch (\Exception $e) {
+        //     return redirect()->back()->with('alert', [
+        //         'messageType' => 'warning',
+        //         'message' => $e->getMessage()
+        //     ]);
+        // }
     }
     public function relatedNews(Request $request)
     {

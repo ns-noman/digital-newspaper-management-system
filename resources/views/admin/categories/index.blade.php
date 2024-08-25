@@ -56,7 +56,7 @@
                                                                 <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-info">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('categories.destroy', $category->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('categories.destroy', $category->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

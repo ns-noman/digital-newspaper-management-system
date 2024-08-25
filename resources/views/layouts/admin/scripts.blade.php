@@ -31,15 +31,16 @@
 <script src="{{ asset('public/admin-assets') }}/plugins/select2/js/select2.full.min.js"></script>
 
 <script>
-    $(function() {
+    $(document).ready(function(){
+
         $("#example1").DataTable({
             "responsive": false,
             "lengthChange": true,
             "autoWidth": true
         });
         $('.select2').select2();
-
     });
+ 
 </script>
 
 <script>
@@ -49,6 +50,31 @@
             window.location.replace($(this).attr('add-new'));
         });
     });
+
+    $(document).ready(function(){
+        $(document).on('click', '.delete button', function(e) {
+            e.preventDefault();
+            let form = $(this).closest('form');
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed){
+                    form.submit();
+                }
+            });
+        });
+    });
+
+
+
+
+
     function nsAjaxPost(url,data){
         return new Promise((resolve, reject) => {
         $.ajax({

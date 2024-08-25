@@ -30,6 +30,10 @@ Route::get('/clear', function() {
     return 'View cache has been cleared';
 });
 
+Route::get('backend',function(){return redirect()->route('admin.login');});
+Route::get('admin',function(){return redirect()->route('admin.login');});
+Route::get('login',function(){return redirect()->route('admin.login');});
+
 Route::prefix('admin')->group(function () {
     route::namespace('App\Http\Controllers\admin')->group(function(){
         Route::prefix('login')->controller(AdminController::class)->group(function(){

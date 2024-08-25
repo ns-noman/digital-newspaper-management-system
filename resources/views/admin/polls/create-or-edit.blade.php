@@ -45,8 +45,8 @@
                                         <div class="form-group col-sm-12 col-md-12 col-lg-12">
                                             <label>Is Closed *</label>
                                             <select name="IsClosed" id="IsClosed" class="form-control">
-                                                <option @selected(($data['item']->IsClosed ?? null) == "Yes") value="Yes">Yes</option>
                                                 <option @selected(($data['item']->IsClosed ?? null) == "No") value="No">No</option>
+                                                <option @selected(($data['item']->IsClosed ?? null) == "Yes") value="Yes">Yes</option>
                                             </select>
                                         </div>
                                     </div>

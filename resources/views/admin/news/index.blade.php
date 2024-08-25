@@ -55,10 +55,13 @@
                                                         <td>{{ $ns->ReporterName }}</td>
                                                         <td>
                                                             <div class="d-flex justify-content-center">
-                                                                <a href="{{ route('news.edit', $ns->id) }}" class="btn btn-info">
+                                                                <a target="_blank" href="{{ route('news.news', implode('-',[$ns->TileUrl ,$ns->id])) }}" class="btn btn-warning mr-1">
+                                                                    <i class="fa-solid fa-eye"></i>
+                                                                </a>
+                                                                <a href="{{ route('news.edit', $ns->id) }}" class="btn btn-info mr-1">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
                                                                 </a>
-                                                                <form action="{{ route('news.destroy', $ns->id) }}" method="post">
+                                                                <form class="delete" action="{{ route('news.destroy', $ns->id) }}" method="post">
                                                                     @csrf
                                                                     @method('DELETE')
                                                                     <button type="submit" class="btn btn-danger">

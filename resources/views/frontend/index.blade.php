@@ -30,15 +30,12 @@
         <div class="row">
             <div class="col-md-10 col-sm-16 top-news">
                 <div class="image_wrapper">
-                    {{-- route('categories.categories', explode('/',$mega_menu['MenuLink'])) --}}
                     <div class="image image-align-tc" style="display: block; background-image: url('{{ asset('public/uploads/news/'.$data['leadNews'][0]['MediumImage']) }}');">
                         <a href="{{ route('news.news',implode('-',[$data['leadNews'][0]['TileUrl'], $data['leadNews'][0]['id']])) }}" data-tb-shadow-region-link="0"></a>
                     </div>
                 </div>
                 <div class="title-cat background-lenear">
                     <p class="top-cat background-lenear-cat">
-                        {{-- @dd(route('categories.categories', [$data['leadNews'][0]['CategoryName'], $data['leadNews'][0]['NewsCategoryID']])) --}}
-                        {{-- @dd(route('categories.categories', [$slug,$id])) --}}
                         <a href="{{ route('categories.categories',[$data['leadNews'][0]['CategoryName'], $data['leadNews'][0]['NewsCategoryID']]) }}">{{ $data['leadNews'][0]['CategoryBngName'] }}</a>
                     </p>
                     <p class="shoulder">{{ $data['leadNews'][0]['NewsShoulder'] }}</p>

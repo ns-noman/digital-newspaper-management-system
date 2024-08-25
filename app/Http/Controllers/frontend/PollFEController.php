@@ -12,7 +12,7 @@ class PollFEController extends Controller
     public function result()
     {
         $data['BasicInfo'] = BasicInfo::first();
-        $data['onlinepoll'] = Poll::where(['IsActive'=>1,'IsClosed'=>'Yes'])->orderByDesc('id')->paginate(5);
+        $data['onlinepoll'] = Poll::where(['IsActive'=>1,'IsClosed'=>'No'])->orderByDesc('id')->limit(1)->get();
         $data['title'] = "Poll Rsult | ". $data['BasicInfo']["SiteName"];
 		$data['description'] = "Poll Rsult | ". $data['BasicInfo']["SiteName"];
         $data['parentcategoryname'] = "Poll Result";
