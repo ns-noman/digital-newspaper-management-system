@@ -15,14 +15,13 @@ use Illuminate\Support\Str;
 use Spatie\Image\Image;
 use Spatie\Image\Manipulations;
 use Auth;
-
+use DB;
 
 class NewsController extends Controller
 {
     public function index()
     {
-        $news = News::select(['id','NewsTitle','Date','ReporterName'])->with(['category','admin'])->orderBy('id','desc')->paginate(10);
-        return view('admin.news.index', compact('news'));
+        return view('admin.news.index');
     }
 
     public function createOrEdit($id=null)
@@ -105,32 +104,72 @@ class NewsController extends Controller
         NewsInfo::where(["NewsID" => $news->id])->update($newsInfo);
         return redirect()->route('news.index')->with('alert',['messageType'=>'success','message'=>'Data Updated Successfully!']);
     }
+    public function allNews(Request $request)
+    {
+        $query = DB::table('news')
+            ->select('news.id', 'news.NewsTitle', 'news.Date', 'news.ReporterName','news.TileUrl', 'categories.SEOCaption as category', 'admins.name as admin')
+            ->leftJoin('categories', 'categories.id', '=', 'news.NewsCategoryID')
+            ->leftJoin('admins', 'admins.id', '=', 'news.UserID');
+
+        // Filtering (if applicable)
+        if ($request->has('search') && $request->search['value']) {
+            $search = $request->search['value'];
+            $query->where(function($q) use ($search) {
+                $q->where('news.NewsTitle', 'like', "%{$search}%")
+                ->orWhere('news.Date', 'like', "%{$search}%")
+                ->orWhere('news.ReporterName', 'like', "%{$search}%")
+                ->orWhere('categories.SEOCaption', 'like', "%{$search}%")
+                ->orWhere('admins.name', 'like', "%{$search}%");
+            });
+        }
+        // Ordering
+        if ($request->has('order')) {
+            $columns = [null, 'news.NewsTitle', 'news.Date', 'categories.SEOCaption', 'admins.name', 'news.ReporterName', null];
+            $orderColumn = $columns[$request->order[0]['column']];
+            $orderDir = $request->order[0]['dir'];
+            $query->orderBy($orderColumn, $orderDir);
+        } else {
+            $query->orderBy('news.id', 'desc');
+        }
+        // Pagination
+        $length = $request->length ?? 10;
+        $start = $request->start ?? 0;
+        // Get paginated results
+        $totalData = $query->count();
+        $data = $query->offset($start)->limit($length)->get();
+        return response()->json([
+            'draw' => $request->draw,
+            'recordsTotal' => $totalData,
+            'recordsFiltered' => $totalData, // If there's filtering, you should update this with the filtered count
+            'data' => $data,
+        ]);
+    }
 
     public function destroy($id)
     {
-        // try {
-        //     $news = News::findOrFail($id);
-        //     if (1 > 3) {
-        //         throw new \Exception('Cannot delete news with associated post!');
-        //     }
-        //     if($news->Image){
-        //         unlink(public_path('uploads/news/'.$news->Image));
-        //         unlink(public_path('uploads/news/'.$news->MediumImage));
-        //         unlink(public_path('uploads/news/'.$news->Thumbimage));
-        //     }
-        //     $news->delete();
-        //     NewsDetails::where(["NewsID" => $news->id])->delete();
-        //     NewsInfo::where(["NewsID" => $news->id])->delete();
-        //     return redirect()->back()->with('alert', [
-        //         'messageType' => 'success',
-        //         'message' => 'News Deleted Successfully!'
-        //     ]);
-        // } catch (\Exception $e) {
-        //     return redirect()->back()->with('alert', [
-        //         'messageType' => 'warning',
-        //         'message' => $e->getMessage()
-        //     ]);
-        // }
+        try {
+            $news = News::findOrFail($id);
+            if (1 > 3) {
+                throw new \Exception('Cannot delete news with associated post!');
+            }
+            if($news->Image){
+                unlink(public_path('uploads/news/'.$news->Image));
+                unlink(public_path('uploads/news/'.$news->MediumImage));
+                unlink(public_path('uploads/news/'.$news->Thumbimage));
+            }
+            $news->delete();
+            NewsDetails::where(["NewsID" => $news->id])->delete();
+            NewsInfo::where(["NewsID" => $news->id])->delete();
+            return redirect()->back()->with('alert', [
+                'messageType' => 'success',
+                'message' => 'News Deleted Successfully!'
+            ]);
+        } catch (\Exception $e) {
+            return redirect()->back()->with('alert', [
+                'messageType' => 'warning',
+                'message' => $e->getMessage()
+            ]);
+        }
     }
     public function relatedNews(Request $request)
     {

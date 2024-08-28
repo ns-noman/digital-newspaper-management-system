@@ -19,14 +19,20 @@
 <script src="{{ asset('public/admin-assets') }}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('public/admin-assets') }}/dist/js/adminlte.js"></script>
+
 <!-- DataTables  & Plugins -->
 <script src="{{ asset('public/admin-assets') }}/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="{{ asset('public/admin-assets') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="{{ asset('public/admin-assets') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+{{-- <script src="{{ asset('public/admin-assets') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="{{ asset('public/admin-assets') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script src="{{ asset('public/admin-assets') }}/plugins/jszip/jszip.min.js"></script>
 <script src="{{ asset('public/admin-assets') }}/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="{{ asset('public/admin-assets') }}/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="{{ asset('public/admin-assets') }}/plugins/pdfmake/vfs_fonts.js"></script> --}}
+
+{{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> --}}
+{{-- <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script> --}}
+
+
 <!-- Select2 -->
 <script src="{{ asset('public/admin-assets') }}/plugins/select2/js/select2.full.min.js"></script>
 
@@ -107,4 +113,34 @@
             });
         });
     }
+
+    function dataTable(options){
+        let defaultOptions = {processing: true,serverSide: true,type: 'GET',order: [],searchReturn: true};
+        options = {...defaultOptions, ...options};
+        var table = $('#dataTable').DataTable({
+            processing: options.processing,
+            serverSide: options.serverSide,
+            ajax: {
+                url: options.url,
+                type: options.type,
+                dataSrc: function(res){
+                    return res.data;
+                }
+            },
+            columns: options.columns,
+            rowCallback: function(row, data, index) {
+                var pageInfo = table.page.info();
+                var serialNumber = pageInfo.start + index + 1;
+                $('td:eq(0)', row).html(serialNumber);
+            },
+            order: options.order,
+            search: {
+                return: defaultOptions.searchReturn
+            }
+        });
+    }
+
+
+
 </script>
+

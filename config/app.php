@@ -195,6 +195,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\AuthorizationServiceProvider::class,
         App\Providers\DateFormatServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 

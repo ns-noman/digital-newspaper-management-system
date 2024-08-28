@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <div class="bootstrap-data-table-panel">
                                     <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-centre">
+                                        <table id="dataTable" class="table table-striped table-bordered table-centre">
                                             <thead>
                                                 <tr>
                                                     <th>SN</th>
@@ -45,33 +45,6 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($news->items() as $ns)
-                                                    <tr>
-                                                        <td>{{ $loop->iteration }}</td>
-                                                        <td>{{ $ns->NewsTitle }}</td>
-                                                        <td>{{ $ns->Date }}</td>
-                                                        <td>{{ $ns->category ? $ns->category->SEOCaption : null }}</td>
-                                                        <td>{{ $ns->admin? $ns->admin->name : null }}</td>
-                                                        <td>{{ $ns->ReporterName }}</td>
-                                                        <td>
-                                                            <div class="d-flex justify-content-center">
-                                                                <a target="_blank" href="{{ route('news.news', implode('-',[$ns->TileUrl ,$ns->id])) }}" class="btn btn-warning mr-1">
-                                                                    <i class="fa-solid fa-eye"></i>
-                                                                </a>
-                                                                <a href="{{ route('news.edit', $ns->id) }}" class="btn btn-info mr-1">
-                                                                    <i class="fa-solid fa-pen-to-square"></i>
-                                                                </a>
-                                                                <form class="delete" action="{{ route('news.destroy', $ns->id) }}" method="post">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-danger">
-                                                                        <i class="fa-solid fa-trash"></i>
-                                                                    </button>
-                                                                </form>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -88,13 +61,58 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center m-1">
-                                {!! $news->onEachSide(1)->links() !!}
-                            </div>
                         </div>
                     </section>
                 </div>
             </div>
         </section>
     </div>
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function(){
+            const options = {};
+            options.url = '{{ route("news.all-news") }}';
+            options.type = 'GET';
+            options.columns = 
+                    [
+                        { data: null, orderable: false, searchable: false },
+                        { data: 'NewsTitle'},
+                        { data: 'Date'},
+                        { data: 'category'},
+                        { data: 'admin'},
+                        { data: 'ReporterName'},
+                        { 
+                            data: null,
+                            orderable: false, 
+                            searchable: false, 
+                            render: function(data, type, row, meta) {
+                                let view = `{{ route('news.news', implode('-',[":TileUrl" ,":id"])) }}`.replace(':TileUrl', row.TileUrl).replace(':id', row.id);
+                                let edit = `{{ route('news.edit', ":id") }}`.replace(':id', row.id);
+                                let destroy = `{{ route('news.destroy', ":id") }}`.replace(':id', row.id);
+                                return (` <div class="d-flex justify-content-center">
+                                                <a target="_blank" href="${view}" class="btn btn-warning mr-1">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </a>
+                                                <a href="${edit}"
+                                                    class="btn btn-info mr-1">
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                </a>
+                                                <form class="delete" action="${destroy}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        `);
+                            }
+                        }
+                      
+                    ];
+            options.processing = true;
+            dataTable(options);
+        });
+    </script>
 @endsection

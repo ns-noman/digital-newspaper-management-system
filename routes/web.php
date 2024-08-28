@@ -75,6 +75,7 @@ Route::prefix('admin')->group(function () {
                     Route::post('store','store')->name('admins.store');
                     Route::put('update/{id}','update')->name('admins.update');
                     Route::delete('delete/{id}','destroy')->name('admins.destroy');
+                    Route::get('all-admins','allAdmins')->name('admins.all-admins');
                 });
             });
 
@@ -117,6 +118,7 @@ Route::prefix('admin')->group(function () {
                 Route::post('store','store')->name('reporters.store');
                 Route::put('update/{id}','update')->name('reporters.update');
                 Route::delete('delete/{id}','destroy')->name('reporters.destroy');
+                Route::get('all-reporters','allReporters')->name('reporters.all-reporters');
             });
             Route::prefix('pages')->controller(PageController::class)->group(function(){
                 Route::get('','index')->name('pages.index');
@@ -167,6 +169,7 @@ Route::prefix('admin')->group(function () {
                 Route::put('update/{id}','update')->name('news.update');
                 Route::delete('delete/{id}','destroy')->name('news.destroy');
                 Route::get('related-news','relatedNews')->name('news.related-news');
+                Route::get('all-news','allNews')->name('news.all-news');
             });
         });
     });

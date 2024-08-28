@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <div class="bootstrap-data-table-panel">
                                     <div class="table-responsive">
-                                        <table id="example1" class="table table-striped table-bordered table-centre">
+                                        <table id="dataTable" class="table table-striped table-bordered table-centre">
                                             <thead>
                                                 <tr>
                                                     <th>SN</th>
@@ -47,36 +47,6 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($reporters as $reporter)
-                                                    <tr>
-                                                        <td>{{ $loop->iteration }}</td>
-                                                        <td>{{ $reporter->ReporterName }}</td>
-                                                        <td>
-                                                            @if ($reporter->Image)
-                                                                <img src="{{ asset('public/uploads/reporters/' . $reporter->Image) }}" height="100px" width="100px">
-                                                            @endif
-                                                        </td>
-                                                        <td>{{ $reporter->Email }}</td>
-                                                        <td>{{ $reporter->Contact }}</td>
-                                                        <td>{{ $reporter->Address }}</td>
-                                                        <td>{{ $reporter->WebLink }}</td>
-                                                        <td>{!! $reporter->Notes !!}</td>
-                                                        <td>
-                                                            <div class="d-flex justify-content-center">
-                                                                <a href="{{ route('reporters.edit', $reporter->id) }}" class="btn btn-info">
-                                                                    <i class="fa-solid fa-pen-to-square"></i>
-                                                                </a>
-                                                                <form class="delete" action="{{ route('reporters.destroy', $reporter->id) }}" method="post">
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-danger">
-                                                                        <i class="fa-solid fa-trash"></i>
-                                                                    </button>
-                                                                </form>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
                                             </tbody>
                                             <tfoot>
                                                 <tr>
@@ -101,4 +71,63 @@
             </div>
         </section>
     </div>
+@endsection
+
+@section('script')
+    <script>
+        $(document).ready(function(){
+            const options = {};
+            options.url = '{{ route("reporters.all-reporters") }}';
+            options.type = 'GET';
+            options.columns = 
+                    [
+                        { data: null, orderable: false, searchable: false },
+                        { data: 'ReporterName'},
+                        {
+                            data: null,
+                            orderable: false,
+                            searchable: false,
+                            render: function(data, type, row, meta){
+                                let image = row.Image ? row.Image : 'placeholder.png';
+                                src = `{{ asset("public/uploads/reporters/:image") }}`.replace(':image', image);
+                                return `<img width="50px" height="50px" src="${src}">`;
+                            }
+                        },
+                        { data: 'Email'},
+                        { data: 'Contact'},
+                        { data: 'Address'},
+                        { data: 'WebLink'},
+                        {
+                            data: 'Notes',
+                            render: function(data, type, row, meta){
+                                return $('<div>').html(data).text();
+                            }
+                        },
+                        {
+                            data: null,
+                            orderable: false, 
+                            searchable: false, 
+                            render: function(data, type, row, meta) {
+                                let edit = `{{ route('reporters.edit', ":id") }}`.replace(':id', row.id);
+                                let destroy = `{{ route('reporters.destroy', ":id") }}`.replace(':id', row.id);
+                                return (` <div class="d-flex justify-content-center">
+                                                <a href="${edit}"
+                                                    class="btn btn-info mr-1">
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                </a>
+                                                <form class="delete" action="${destroy}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        `);
+                            }
+                        }
+                    ];
+            dataTable(options);
+        });
+    </script>
 @endsection

@@ -8,6 +8,7 @@ use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\Facades\DataTables;
 use Auth;
 use Hash;
 
@@ -155,6 +156,37 @@ class AdminController extends Controller
     public function logout(Request $request){
         Auth::guard('admin')->logout();
         return redirect()->route('admin.login');
+    }
+
+    
+    public function allAdmins(Request $request)
+    {
+        $query = Admin::join('roles', 'roles.id', '=', 'admins.type')
+        ->where('roles.is_superadmin', 0)
+        ->select('admins.id', 'admins.name', 'roles.role', 'admins.mobile', 'admins.email');
+        if(!$request->has('order')) $query = $query->orderBy('id','desc');
+        return DataTables::of($query)->make(true);
+
+        // $query = Admin::join('roles', 'roles.id','=','admins.type')->where('roles.is_superadmin',0)->select('admins.*','roles.role');
+        // Query the database to get the data
+        // $query = DB::table('datatables_demo')->select([
+        //     'first_name',
+        //     'last_name',
+        //     'position',
+        //     'office',
+        //     'start_date',
+        //     'salary'
+        // ]);
+
+        // Return the data formatted for DataTables
+        // return DataTables::of($query)
+        //     ->editColumn('start_date', function ($row) {
+        //         return date('jS M y', strtotime($row->start_date));
+        //     })
+        //     ->editColumn('salary', function ($row) {
+        //         return '$' . number_format($row->salary);
+        //     })
+        //     ->make(true);
     }
 
 }

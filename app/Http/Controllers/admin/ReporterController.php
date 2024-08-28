@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Models\Reporter;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 use Auth;
 
 class ReporterController extends Controller
@@ -13,14 +14,6 @@ class ReporterController extends Controller
     {
         $reporters = Reporter::orderBy('id', 'desc')->get();
         return view('admin.reporters.index', compact('reporters'));
-        // foreach ($reporters as $key => $reporter) {
-        //     $oldImage = $reporter->Image;
-            // $newImage = str_replace("img/","", $oldImage);
-            // if($oldImage=='img/blank_face.png'){
-            //     $reporter->update(["Image"=> null]);
-            // }
-            // $reporter->update(["Image"=> substr($oldImage, 21)]);
-        // }
     }
 
     public function createOrEdit($id=null)
@@ -80,6 +73,12 @@ class ReporterController extends Controller
                 'message' => $e->getMessage()
             ]);
         }
+    }
+    public function allReporters(Request $request)
+    {
+        $query = Reporter::select('id','ReporterName','Image','Email','Contact','Address','WebLink','Notes',);
+        if(!$request->has('order')) $query = $query->orderBy('id', 'desc');
+        return DataTables::of($query)->make(true);
     }
 
 }

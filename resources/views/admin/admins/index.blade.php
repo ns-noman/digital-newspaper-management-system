@@ -1,5 +1,6 @@
 @extends('layouts.admin.master')
 @section('content')
+
 <div class="content-wrapper">
     <div class="content-header">
         @include('layouts.admin.flash-message')
@@ -32,7 +33,7 @@
                         <div class="card-body">
                             <div class="bootstrap-data-table-panel">
                                 <div class="table-responsive">
-                                    <table id="example1" class="table table-striped table-bordered table-centre">
+                                    <table id="dataTable" class="table table-striped table-bordered table-centre">
                                         <thead>
                                             <tr>
                                                 <th>SN</th>
@@ -46,34 +47,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach ($admins as $admin)
-                                                <tr>
-                                                    <td>{{ $loop->iteration }}</td>
-                                                    <td>{{ $admin->name }}</td>
-                                                    <td>{{ $admin->role }}</td>
-                                                    <td>{{ $admin->mobile }}</td>
-                                                    <td>{{ $admin->email }}</td>
-                                                    <td>
-                                                        <img width="50px" height="50px" src="{{ asset('public/uploads/admin/'. ($admin->image?$admin->image : 'placeholder.png')) }}">
-                                                    </td>
-                                                    <td>{{ $admin->status==1? 'Active' : 'Inactive' }}</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-center">
-                                                            <a href="{{ route('admins.edit', $admin->id) }}"
-                                                                class="btn btn-info">
-                                                                <i class="fa-solid fa-pen-to-square"></i>
-                                                            </a>
-                                                            <form class="delete" action="{{ route('admins.destroy', $admin->id) }}" method="post">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="btn btn-danger">
-                                                                    <i class="fa-solid fa-trash-can"></i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -97,4 +70,140 @@
         </div>
     </section>
 </div>
+@endsection
+@section('script')
+    <script>
+        $(document).ready(function(){
+            const options = {};
+            options.url = '{{ route("admins.all-admins") }}';
+            options.type = 'GET';
+            options.columns = 
+                    [
+                        { data: null, orderable: false, searchable: false },
+                        { data: 'name', name: 'admins.name'},
+                        { data: 'role', name: 'roles.role'},
+                        { data: 'mobile', name: 'admins.mobile'},
+                        { data: 'email', name: 'admins.email'},
+                        { 
+                            data: null,
+                            orderable: false, 
+                            searchable: false, 
+                            render: function(data, type, row, meta) {
+                                let image = row.image ? row.image : 'placeholder.png';
+                                src = `{{ asset("public/uploads/admin/:image") }}`.replace(':image', image);
+                                return `<img width="50px" height="50px" src="${src}">`;
+                            }
+                        },
+                        { 
+                            data: null, 
+                            name: 'admins.status', 
+                            orderable: true, 
+                            searchable: false, 
+                            render: function(data, type, row, meta) {
+                                return row.status == 1? 'Active' : 'Inactive';
+                            }
+                        },
+                        { 
+                            data: null,
+                            orderable: false, 
+                            searchable: false, 
+                            render: function(data, type, row, meta) {
+                                let edit = `{{ route('admins.edit', ":id") }}`.replace(':id', row.id);
+                                let destroy = `{{ route('admins.destroy', ":id") }}`.replace(':id', row.id);
+
+                                return (` <div class="d-flex justify-content-center">
+                                                <a href="${edit}"
+                                                    class="btn btn-info">
+                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                </a>
+                                                <form class="delete" action="${destroy}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        `);
+                            }
+                        }
+                    ];
+            options.processing = true;
+            dataTable(options);
+        });
+    </script>
+
+    <script>
+    //    $(document).ready(function() {
+    //     var table = $('#datatable').DataTable({
+    //         processing: true,
+    //         serverSide: true,
+    //         ajax: {
+    //             url: '{{ route("admins.all-admins") }}',
+    //             type: 'GET',
+    //             dataSrc: function(res){
+    //                 return res.data;
+    //             }
+    //         },
+    //         columns: [
+    //             { data: null, orderable: false, searchable: false },
+    //             { data: 'name', name: 'admins.name'},
+    //             { data: 'role', name: 'roles.role'},
+    //             { data: 'mobile', name: 'admins.mobile'},
+    //             { data: 'email', name: 'admins.email'},
+    //             { 
+    //                 data: null,
+    //                 orderable: false, 
+    //                 searchable: false, 
+    //                 render: function(data, type, row, meta) {
+    //                     let image = row.image ? row.image : 'placeholder.png';
+    //                     src = `{{ asset("public/uploads/admin/:image") }}`.replace(':image', image);
+    //                     return `<img width="50px" height="50px" src="${src}">`;
+    //                 }
+    //             },
+    //             { 
+    //                 data: null, 
+    //                 name: 'admins.status', 
+    //                 orderable: true, 
+    //                 searchable: false, 
+    //                 render: function(data, type, row, meta) {
+    //                     return row.status == 1? 'Active' : 'Inactive';
+    //                 }
+    //             },
+    //             { 
+    //                 data: null,
+    //                 orderable: false, 
+    //                 searchable: false, 
+    //                 render: function(data, type, row, meta) {
+    //                     let edit = `{{ route('admins.edit', ":id") }}`.replace(':id', row.id);
+    //                     let destroy = `{{ route('admins.destroy', ":id") }}`.replace(':id', row.id);
+
+    //                     return (` <div class="d-flex justify-content-center">
+    //                                     <a href="${edit}"
+    //                                         class="btn btn-info">
+    //                                         <i class="fa-solid fa-pen-to-square"></i>
+    //                                     </a>
+    //                                     <form class="delete" action="${destroy}" method="post">
+    //                                         @csrf
+    //                                         @method('DELETE')
+    //                                         <button type="submit" class="btn btn-danger">
+    //                                             <i class="fa-solid fa-trash-can"></i>
+    //                                         </button>
+    //                                     </form>
+    //                                 </div>
+    //                             `);
+    //                 }
+    //             }
+    //         ],
+    //         rowCallback: function(row, data, index) {
+    //             var pageInfo = table.page.info();
+    //             var serialNumber = pageInfo.start + index + 1;
+    //             $('td:eq(0)', row).html(serialNumber);
+    //         },
+    //         order: [],
+    //     });
+    // });
+
+
+    </script>
 @endsection
