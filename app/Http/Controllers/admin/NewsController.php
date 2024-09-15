@@ -171,6 +171,21 @@ class NewsController extends Controller
             ]);
         }
     }
+
+    // public function uploaderinfo($user_id, $id, $detail_old, $detail_new, $NewsTitle_old, $NewsTitle_new)
+    // {
+    //     $this->login_check();
+    //     $filename = $id . time() . 'output.html';
+    //     $this->SiteModel->insert("newsuploader", array("NewsID" => $id, "UserID" => $user_id, "ImageBefore" => "assets/html/" . date("Ym") . "/" . $filename));
+    //     $content = $this->load->view('news/html', array("detail_old" => $detail_old, "detail_new" => $detail_new, "NewsTitle_old" => $NewsTitle_old, "NewsTitle_new" => $NewsTitle_new), true);
+    //     $uploadDir = $this->config->item('root_dir') . "assets/html/" . date("Ym");
+    //     if (!file_exists($uploadDir) || !is_dir($uploadDir))
+    //     mkdir("$uploadDir");
+    //     file_put_contents($uploadDir . "/" . $filename, $content);
+    // }
+
+
+
     public function relatedNews(Request $request)
     {
         $query = News::where('NewsTitle', 'LIKE', "%{$request->search}%")->select(['id', 'NewsTitle as text', 'Thumbimage as thumbimage', 'Date as date'])->paginate(10, ['*'], 'page', $request->page);
