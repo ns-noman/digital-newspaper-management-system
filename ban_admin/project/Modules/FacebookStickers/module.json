@@ -1,0 +1,13 @@
+{
+    "name": "FacebookStickers",
+    "alias": "facebookstickers",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FacebookStickers\\Providers\\FacebookStickersServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,652 @@
+@extends('layouts.app')
+@section('title', 'Authors')
+
+@push('top-scripts')
+<link href="{{asset('assets/css/bootstrap-fileupload.min.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/bootstrap-tagsinput.css')}}" rel="stylesheet">
+<style type="text/css">
+	.bootstrap-tagsinput{
+		width: 100%
+	}
+	.pager{
+		text-align: right;
+	}
+	.pager li>a, .pager li>span{
+		border-radius: 0px !important
+	}
+</style>
+@endpush
+
+@section('content')
+<section class="vbox">
+	<section class="scrollable padder">
+		<div class="m-b-md"></div>
+
+		@if(session('success_message'))
+		<div class="alert alert-success text-center alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong>{{session('success_message')}} </strong>
+		</div>
+		@endif
+
+		@if(session('error_message'))
+		<div class="alert alert-danger text-center alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong>{{session('error_message')}} </strong>
+		</div>
+		@endif
+
+		<section class="panel panel-default">
+			<header class="panel-heading font-bold">Authors
+				<a href="javascript::void(0)" data-toggle="modal" data-target="#createModal" class="btn btn-success btn-xs pull-right"> <i class="fa fa-plus-circle"></i> New Author</a>
+				<select name="paginationAmount" class="input-sm form-control input-s-sm inline v-middle pull-right paginationAmount" style="margin-right: 10px;padding: 2px 5px;height: 23px;width: 100px">
+					<option value="10">Row- 10</option>
+					<option value="50" {{isset($_GET['paginationAmount']) && $_GET['paginationAmount'] == 50 ? 'selected' : Null}}>Row- 50</option>
+					<option value="100" {{isset($_GET['paginationAmount']) && $_GET['paginationAmount'] == 100 ? 'selected' : Null}}>Row- 100</option>
+					<option value="200" {{isset($_GET['paginationAmount']) && $_GET['paginationAmount'] == 200 ? 'selected' : Null}}>Row- 200</option>
+					<option value="300" {{isset($_GET['paginationAmount']) && $_GET['paginationAmount'] == 300 ? 'selected' : Null}}>Row- 300</option>
+				</select>
+			</header>
+
+			<div class="row wrapper">
+				<form method="get">
+					<input type="hidden" name="search" value="yes">
+					<input type="hidden" name="paginationAmount" value="{{isset($_GET['paginationAmount']) && !empty($_GET['paginationAmount']) ? $_GET['paginationAmount'] : 10}}">
+
+					<div class="col-sm-2 m-b-xs">
+						<input name="author_name" type="text" class="input-sm form-control" value="{{!empty($_GET['author_name']) ? $_GET['author_name'] : ''}}" placeholder="Name" autocomplete="off" />
+					</div>
+					<div class="col-sm-2 m-b-xs paddingL0">
+						<input name="author_phone" type="text" class="input-sm form-control" value="{{!empty($_GET['author_phone']) ? $_GET['author_phone'] : ''}}" placeholder="Mobile" autocomplete="off" />
+					</div>
+					<div class="col-sm-2 m-b-xs paddingL0">
+						<input name="author_email" type="text" class="input-sm form-control" value="{{!empty($_GET['author_email']) ? $_GET['author_email'] : ''}}" placeholder="Email" autocomplete="off" />
+					</div>
+					<div class="col-sm-2 m-b-xs paddingL0">
+						<select class="input-sm form-control" name="department_id">
+							<option value="">-Select Department-</option>
+							@if(!empty($departments) && (count($departments)>0))
+							@foreach($departments as $key => $department)
+							<option {{!empty($_GET['department_id']) && $_GET['department_id'] == $department->id ? 'selected' : ''}} value="{!! $department->id !!}">{!! $department->title !!}</option>
+							@endforeach
+							@endif
+						</select>
+					</div>
+					<div class="col-sm-2 m-b-xs paddingL0">
+						<select class="input-sm form-control" name="type">
+							<option {{!empty($_GET['type']) && $_GET['type'] == 1 ? 'selected' : ''}} value="1">Office Journalist</option>
+							<option {{!empty($_GET['type']) && $_GET['type'] == 2 ? 'selected' : ''}} value="2">External Writter</option>
+						</select>
+					</div>
+					<div class="col-sm-1 m-b-xs paddingL0">
+						<button class="btn btn-sm btn-default btn-block">Search</button>
+					</div>
+				</form>
+			</div>
+
+			<form method="post" action="{{route('Authors Bulk Update')}}">
+				{{csrf_field()}}
+				<div class="table-responsive">
+					<table class="table table-striped b-t b-light table-bordered table-hover">
+						<thead>
+							<tr>
+								<th width="20">
+									<label class="checkbox m-l m-t-none m-b-none i-checks">
+										<input type="checkbox"><i></i>
+									</label>
+								</th>
+								<th>SL</th>
+								<th>Name</th>
+								<th>Photo</th>
+								<th>Department</th>
+								<th width="300">About</th>
+								<th>Type</th>	
+								<th>Create</th>	
+								<th>Status</th>	
+								<th width="90">Action</th>
+							</tr>
+						</thead>
+						<tbody class="dragAndDrop">
+							@if(!empty($lists) && (count($lists)>0))
+							@foreach($lists as $key => $list)
+							<tr>
+								<td>
+									<label class="checkbox m-l m-t-none m-b-none i-checks">
+										<input type="checkbox" name="ids[]" value="{{$list->id}},{{$list->order_id}}"><i></i>
+									</label>
+								</td>
+								<td>{!! isset($_GET['page']) && !empty($_GET['page']) ? (($_GET['page']-1)*10)+($key+1) : $key + 1 !!}</td>
+								<td><a style="color: #337ab7 !important;" href="{!! env('WEBSITE').'author/'.$list->id.'/'.$list->author_slug !!}" target="_blank">{{$list->author_name}}</a></td>
+								<td>
+									@if(!empty($list->author_photo))
+									<img src="{{env('UploadsLink').'uploads/authors/'.$list->author_photo}}" height="60px" width="40px" class="img-responsive" style="border-radius: 50%">
+									@else
+									<img src="{{asset('assets/images/avatars/default-avatar.png')}}" height="60px" width="40px" class="img-responsive" style="border-radius: 50%" />
+									@endif
+								</td>
+								<td>{{!empty($list->department_id) ? $list->departmentInfo->title : ''}}</td>
+								<td>
+									<b>{{$list->author_email}} {!! !empty($list->author_phone) ? '<br>'.$list->author_phone : '' !!}</b>
+									<br>
+									{{$list->author_about}}
+								</td>
+								<td>{{$list->type == 1 ? 'Office Journalist' : 'External Writter'}}</td>
+								<td>
+									<p class="margin0"><b><u>Create:</u> {{$list->createdBy->name}}</b></p>
+									<p class="margin0">{{date('d M Y h:i A', strtotime($list->created_at))}}</p>
+									@if(!empty($list->updated_at))
+									<p class="margin0 marginT5"><b><u>Update:</u> {{$list->updatedBy ? $list->updatedBy->name : ''}}</b></p>
+									<p class="margin0">{{date('d M Y h:i A', strtotime($list->updated_at))}}</p>
+									@endif
+								</td>
+								<td>{{$list->status == 1 ? 'Active' : 'Inactive'}}</td>
+								<td>
+									<button type="button" class="btn btn-primary btn-xs openeditModal" data-toggle="modal" data-target="#editModal" data-id="{{$list->id}}" data-author-name="{{$list->author_name}}" data-author-name-en="{{$list->author_name_en}}" data-author-email="{{$list->author_email}}" data-author-phone="{{$list->author_phone}}" data-author-address="{{$list->author_address}}" data-author-about="{{$list->author_about}}" data-author-photo="{{$list->author_photo}}" data-facebook="{{$list->facebook}}" data-twitter="{{$list->twitter}}" data-linkedin="{{$list->linkedin}}" data-type="{{$list->type}}" data-department-id="{{$list->department_id}}" data-status="{{$list->status}}"><i class="fa fa-edit" title="Edit"></i></button>
+									<a href="{{route('Authors Delete', $list->id)}}" class="btn btn-danger btn-xs delete" onclick="return confirm('Are you sure you want to  delete?');"><i class="fa fa-trash"></i></a>
+								</td>
+
+							</tr>
+							@endforeach
+							@else
+							<tr><td colspan="10" class="text-center">No Data</td></tr>
+							@endif
+						</tbody>
+					</table>
+				</div>
+
+				<footer class="panel-footer">
+					<div class="row">
+						<div class="col-sm-4">
+							<select class="input-sm form-control input-s-sm inline v-middle bulkAction" name="bulkStatus" required="">
+								<option value="">Select</option>
+								<option value="" class="optionGroup" disabled="">Status</option>
+								<option value="1">Active</option>
+								<option value="2">Inactive</option>
+								<option value="-1">Remove</option>
+								<option value="" class="optionGroup" disabled="">Other Options</option>
+								<option value="swapOrder">Swap Order</option>
+							</select>
+							<button type="submit" class="btn btn-sm btn-default">Apply</button>
+						</div>
+						@if(!empty($lists) && count($lists)>0)
+						<div class="col-sm-8 text-right customPaginationStyle">
+							{{$lists->appends(request()->input())->links()}}
+						</div>
+						@endif
+					</div>
+				</footer>
+			</form>
+
+		</section>
+	</section>
+</section>
+
+
+
+<!-- create modal -->
+<div id="createModal" class="modal fade" role='dialog'>
+	<div class="modal-dialog modal-md">
+		<div class="content">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Add New Author</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form" class="form-horizontal" method="post" action="{{route('Authors Store')}}" enctype="multipart/form-data">
+						{{csrf_field()}}
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Type *</b></label>
+							<div class="col-sm-8">
+								<select class="form-control authorType" name="type" required="">
+									<option value="1">Office Journalist</option>
+									<option value="2">External Writter</option>
+								</select>
+								@if($errors->has('type'))
+								<span class="help-block">{{ $errors->first('type') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group authorDepartment">
+							<label class="col-sm-3 control-label"><b>Department *</b></label>
+							<div class="col-sm-8">
+								<select class="form-control" name="department_id">
+									<option value="">-Select Department-</option>
+									@if(!empty($departments) && (count($departments)>0))
+									@foreach($departments as $key => $department)
+									<option value="{!! $department->id !!}">{!! $department->title !!}</option>
+									@endforeach
+									@endif
+								</select>
+								@if($errors->has('department_id'))
+								<span class="help-block">{{ $errors->first('department_id') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Name *</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_name" class="form-control" autofocus required />
+								@if($errors->has('author_name'))
+								<span class="help-block">{{ $errors->first('author_name') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Name English *</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_name_en" class="form-control" autofocus required />
+								@if($errors->has('author_name_en'))
+								<span class="help-block">{{ $errors->first('author_name_en') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Email</b></label>
+							<div class="col-sm-8">
+								<input type="email" name="author_email" class="form-control"/>
+								@if($errors->has('author_email'))
+								<span class="help-block">{{ $errors->first('author_email') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Mobile</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_phone" class="form-control"/>
+								@if($errors->has('author_phone'))
+								<span class="help-block">{{ $errors->first('author_phone') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Address</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_address" class="form-control"  />
+								@if($errors->has('author_address'))
+								<span class="help-block">{{ $errors->first('author_address') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>About</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_about" class="form-control">
+								@if($errors->has('author_about'))
+								<span class="help-block">{{ $errors->first('author_about') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Photo (150x150) *</b></label>
+							<div class="col-sm-8">
+								<div class="fileupload fileupload-new" data-provides="fileupload" >
+									<span class="fileupload-preview fileupload-exists thumbnail" style="max-width: 150px;">
+									</span>
+									<span>
+										<label class="btn btn-primary btn-rounded btn-file btn-sm">
+											<span class="fileupload-new">
+												<i class="fa fa-picture-o"></i> Select Image
+											</span>
+											<span class="fileupload-exists">
+												<i class="fa fa-picture-o"></i> Change
+											</span>
+											<input type="file" name="author_photo" value="" required>
+										</label>
+										<a href="#" class="btn fileupload-exists btn-default btn-rounded  btn-sm" data-dismiss="fileupload">
+											<i class="fa fa-times"></i> Remove
+										</a>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<hr>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Facebook Url</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="facebook" class="form-control" />
+								@if($errors->has('facebook'))
+								<span class="help-block">{{ $errors->first('facebook') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Twitter Url</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="twitter" class="form-control"/>
+								@if($errors->has('twitter'))
+								<span class="help-block">{{ $errors->first('twitter') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Linkedin Url</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="linkedin" class="form-control" />
+								@if($errors->has('linkedin'))
+								<span class="help-block">{{ $errors->first('linkedin') }}</span>
+								@endif
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Status *</b></label>
+							<div class="col-sm-8">
+								<select class="form-control" name="status" required="">
+									<option value="1">Active</option>
+									<option value="2">Inactive</option>
+								</select>
+								@if($errors->has('status'))
+								<span class="help-block">{{ $errors->first('status') }}</span>
+								@endif
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-8 col-sm-offset-3">
+								<button type="submit" class="btn btn-primary btn-block">Save</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- edit modal -->
+<div id="editModal" class="modal fade" role='dialog'>
+	<div class="modal-dialog modal-md">
+		<div class="content">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Edit Author</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form" class="form-horizontal" method="post" action="{{route('Authors Update')}} " enctype="multipart/form-data">
+						{{csrf_field()}}
+						<input type="hidden" id="id" name="id">
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Type *</b></label>
+							<div class="col-sm-8">
+								<select class="form-control authorType" name="type" id="type" required="">
+									<option value="1">Office Journalist</option>
+									<option value="2">External Writter</option>
+								</select>
+								@if($errors->has('type'))
+								<span class="help-block">{{ $errors->first('type') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group authorDepartment">
+							<label class="col-sm-3 control-label"><b>Department *</b></label>
+							<div class="col-sm-8">
+								<select class="form-control" name="department_id" id="department_id">
+									<option value="">-Select Department-</option>
+									@if(!empty($departments) && (count($departments)>0))
+									@foreach($departments as $key => $department)
+									<option value="{!! $department->id !!}">{!! $department->title !!}</option>
+									@endforeach
+									@endif
+								</select>
+								@if($errors->has('department_id'))
+								<span class="help-block">{{ $errors->first('department_id') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Name *</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_name" id="author_name" class="form-control" autofocus required />
+								@if($errors->has('author_name'))
+								<span class="help-block">{{ $errors->first('author_name') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Name English *</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_name_en" id="author_name_en" class="form-control" autofocus required />
+								@if($errors->has('author_name_en'))
+								<span class="help-block">{{ $errors->first('author_name_en') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Email</b></label>
+							<div class="col-sm-8">
+								<input type="email" name="author_email" id="author_email" class="form-control"/>
+								@if($errors->has('author_email'))
+								<span class="help-block">{{ $errors->first('author_email') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Mobile</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_phone" id="author_phone" class="form-control"/>
+								@if($errors->has('author_phone'))
+								<span class="help-block">{{ $errors->first('author_phone') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Address</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_address" id="author_address" class="form-control"  />
+								@if($errors->has('author_address'))
+								<span class="help-block">{{ $errors->first('author_address') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>About</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="author_about" id="author_about" class="form-control">
+								@if($errors->has('author_about'))
+								<span class="help-block">{{ $errors->first('author_about') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-3 text-right">
+								<label class="control-label"><b>Photo (150x150) *</b></label>
+							</div>
+							<div class="col-sm-8">
+								<div class="fileupload fileupload-exists" data-provides="fileupload" >
+									<span class="fileupload-preview fileupload-exists thumbnail">
+										<img id="author_photo" alt="author_photo" class="img-responsive" style="max-width: 150px;"/>
+									</span>
+									<span>
+										<label class="btn btn-primary btn-rounded btn-file btn-sm">
+											<span class="fileupload-new">
+												<i class="fa fa-picture-o"></i> Select Photo
+											</span>
+											<span class="fileupload-exists">
+												<i class="fa fa-picture-o"></i> Change
+											</span>
+											<input type="file" name="author_photo">
+										</label>
+										<a href="" class="btn fileupload-exists btn-default btn-rounded  btn-sm" data-dismiss="fileupload" id="remove-thumbnail">
+											<i class="fa fa-times"></i> Remove
+										</a>
+									</span>
+								</div>
+							</div>
+						</div>
+						
+						<hr>
+						
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Facebook Url</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="facebook" id="facebook" class="form-control" />
+								@if($errors->has('facebook'))
+								<span class="help-block">{{ $errors->first('facebook') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Twitter Url</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="twitter" id="twitter" class="form-control"/>
+								@if($errors->has('twitter'))
+								<span class="help-block">{{ $errors->first('twitter') }}</span>
+								@endif
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label"><b>Linkedin Url</b></label>
+							<div class="col-sm-8">
+								<input type="text" name="linkedin" id="linkedin" class="form-control" />
+								@if($errors->has('linkedin'))
+								<span class="help-block">{{ $errors->first('linkedin') }}</span>
+								@endif
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-3 text-right">
+								<label class="control-label"><b>Status *</b></label>
+							</div>
+							<div class="col-sm-8">
+								<select class="form-control" name="status" id="status" required="">
+									<option value="1">Active</option>
+									<option value="2">Inactive</option>
+									<option value="-1">Remove</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-sm-8  col-sm-offset-3">
+								<button type="submit" class="btn btn-primary btn-block">Save</button>
+							</div>
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@endsection
+
+
+@push('bottom-scripts')
+<script src="{{asset('assets/js/plugins/bootstrap-fileupload.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/bootstrap-tagsinput.min.js')}}"></script>
+
+<script type="text/javascript">
+	$('.delete').on("click", function (e) {
+		e.preventDefault();
+		var choice = confirm($(this).attr('data-confirm'));
+		if (choice) {
+			window.location.href = $(this).attr('href');
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	$('.authorType').change(function(){
+		var authorType = $(this).val();
+		if(authorType == 1){
+			$('.authorDepartment').show();
+		}else{
+			$('.authorDepartment').hide();
+		}
+	})
+</script>
+
+<script type="text/javascript">
+	$(".openeditModal").click(function(){
+		var id = $(this).data('id');
+		var author_name = $(this).data('author-name');
+		var author_name_en = $(this).data('author-name-en');
+		var author_email = $(this).data('author-email');
+		var author_phone = $(this).data('author-phone');
+		var author_address = $(this).data('author-address');
+		var author_about = $(this).data('author-about');
+		var facebook = $(this).data('facebook');
+		var twitter = $(this).data('twitter');
+		var linkedin = $(this).data('linkedin');
+		var department_id = $(this).data('department-id');
+		var type = $(this).data('type');
+		var status = $(this).data('status');
+		var author_photo = $(this).data('author-photo');
+
+		$('.modal-body #id').val(id);
+		$('.modal-body #author_name').val(author_name);
+		$('.modal-body #author_name_en').val(author_name_en);
+		$('.modal-body #author_email').val(author_email);
+		$('.modal-body #author_phone').val(author_phone);
+		$('.modal-body #author_address').val(author_address);
+		$('.modal-body #author_about').val(author_about);
+		$('.modal-body #facebook').val(facebook);
+		$('.modal-body #twitter').val(twitter);
+		$('.modal-body #linkedin').val(linkedin);
+		$('.modal-body #department_id').val(department_id);
+		$('.modal-body #type').val(type);
+		$('.modal-body #status').val(status);
+
+		if(author_photo){
+			var authorPhoto = '{{env('UploadsLink')}}/uploads/authors'+'/'+author_photo;
+			$(".modal-body #author_photo").attr('src', authorPhoto);
+		}
+
+		if(type == 1){
+			$('.authorDepartment').show();
+		}else{
+			$('.authorDepartment').hide();
+		}
+
+	});
+</script>
+
+<!-- pagination -->
+<script type="text/javascript">
+	$('.paginationAmount').on('change',function(){
+		var paginationAmount = $('.paginationAmount').val();
+		var existingPaginationAmount = '{{!empty($_GET['paginationAmount']) ? $_GET['paginationAmount'] : ''}}';
+
+		var refreshUrl = '{{Request::fullUrl()}}';
+		if(existingPaginationAmount != ''){
+			refreshUrl = refreshUrl.replace("paginationAmount="+existingPaginationAmount, "paginationAmount="+paginationAmount);
+		}else{
+			refreshUrl = refreshUrl+'?paginationAmount='+paginationAmount;
+		}
+		refreshUrl = refreshUrl.replaceAll("amp;", "");
+		window.location = refreshUrl;
+	})
+</script>
+
+<!-- drag and drop -->
+<script src="{{asset('assets/vendors/jquery-ui-1.12.1/jquery-ui.min.js')}}"></script>
+<script type="text/javascript">
+	$('.bulkAction').change(function(){
+		var bulkAction = $('.bulkAction').val();
+		if(bulkAction == 'swapOrder'){
+			$('.checkbox').find(':checkbox').attr('checked', 'checked');
+			$('.dragAndDrop').sortable();
+		}else{
+			$('.checkbox').find(':checkbox').removeAttr('checked');
+		}
+	});
+</script>
+@endpush
+

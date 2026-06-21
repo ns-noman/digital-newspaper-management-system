@@ -1,0 +1,13 @@
+{
+    "name": "LiveUpdates",
+    "alias": "liveupdates",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LiveUpdates\\Providers\\LiveUpdatesServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,13 @@
+{
+    "name": "PopularNews",
+    "alias": "popularnews",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PopularNews\\Providers\\PopularNewsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

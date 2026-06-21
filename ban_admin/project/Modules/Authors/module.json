@@ -1,0 +1,13 @@
+{
+    "name": "Authors",
+    "alias": "authors",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Authors\\Providers\\AuthorsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

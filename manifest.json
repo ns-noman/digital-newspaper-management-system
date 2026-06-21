@@ -1,0 +1,81 @@
+{
+  "short_name": "BKhabor",
+  "name": "BKhabor",
+  "background_color": "#ffffff",
+  "theme_color": "#017AC3",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "id": "net.bangladesherkhabor.www",
+  "orientation": "any",
+  "default_locale": "bn",
+  "dir": "ltr",
+  "description": "বাংলাদেশসহ বিশ্বের সর্বশেষ সংবাদ শিরোনাম, প্রতিবেদন, বিশ্লেষণ, খেলা, বিনোদন, চাকরি, রাজনীতি ও বাণিজ্যের বাংলা নিউজ পড়তে ভিজিট করুন বাংলাদেশের খবর।",
+  "launch_handler": {
+    "client_mode": ["auto", "focus-existing"] 
+  },
+  "icons": [
+    {
+      "src": "uploads/settings/icons/icon36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "uploads/settings/icons/icon48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "uploads/settings/icons/icon72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "uploads/settings/icons/icon96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "uploads/settings/icons/icon144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "uploads/settings/icons/icon192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "uploads/settings/icons/icon512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "uploads/settings/icons/screenshot1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view"
+    },
+    {
+      "src": "uploads/settings/icons/screenshot1080x1920.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "BKhabor",
+      "url": "/",
+      "description": "Bangladesherkhabor App"
+    }
+  ],
+  "categories": [
+    "news"
+  ]
+}

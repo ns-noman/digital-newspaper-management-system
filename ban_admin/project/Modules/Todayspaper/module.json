@@ -1,0 +1,13 @@
+{
+    "name": "Todayspaper",
+    "alias": "todayspaper",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Todayspaper\\Providers\\TodayspaperServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,13 @@
+{
+    "name": "CacheControlls",
+    "alias": "cachecontrolls",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CacheControlls\\Providers\\CacheControllsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

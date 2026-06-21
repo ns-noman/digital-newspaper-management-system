@@ -1,0 +1,13 @@
+{
+    "name": "ArchivedTopics",
+    "alias": "archivedtopics",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ArchivedTopics\\Providers\\ArchivedTopicsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

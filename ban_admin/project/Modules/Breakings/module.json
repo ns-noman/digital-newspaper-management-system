@@ -1,0 +1,13 @@
+{
+    "name": "Breakings",
+    "alias": "breakings",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Breakings\\Providers\\BreakingsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

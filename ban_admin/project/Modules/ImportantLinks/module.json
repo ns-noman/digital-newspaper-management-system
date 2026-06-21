@@ -1,0 +1,13 @@
+{
+    "name": "ImportantLinks",
+    "alias": "importantlinks",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ImportantLinks\\Providers\\ImportantLinksServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

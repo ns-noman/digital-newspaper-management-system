@@ -1,0 +1,17 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::prefix('seo')->group(function() {
+    Route::get('/post/meta', 'SeoController@postMeta')->name('Seo Post Meta');
+    Route::post('/post/update-meta', 'SeoController@postMetaUpdate')->name('Seo Post Meta Update');
+});
